@@ -27,6 +27,8 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+
 </head>
 
 <body class="implementation-page">
@@ -75,20 +77,22 @@
               <li><a href="ui_design.html#prototype">Prototype</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="system_design.html"><span>System Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="system_design.html" ><span>System Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="system_design.html#system_architecture">System Architecture</a></li>
+              <li><a href="system_design.html#architecture">System Architecture</a></li>
               <li><a href="system_design.html#design_patterns">Design Patterns</a></li>
-              <li><a href="system_design.html#site_map">Site Map</a></li>
-              <li><a href="system_design.html#data_storage">Data Storage</a></li>
+              <li><a href="system_design.html#api">APIs Definition</a></li>
+              <li><a href="system_design.html#multimodal_backend">Multimodal Backend</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="implementation.html" class="active"><span>Implementation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="implementation.html"><span>Implementation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="implementation.html#packages_frameworks">Packages&amp;Frameworks</a></li>
-              <li><a href="implementation.html#">Dropdown 2</a></li>
-              <li><a href="implementation.html#">Dropdown 3</a></li>
-              <li><a href="implementation.html#">Dropdown 4</a></li>
+              <li><a href="implementation.html#project_structure">Project structure</a></li>
+              <li><a href="implementation.html#features">Features</a></li>
+              <li><a href="implementation.html#chat_with_video">Chat with Video</a></li>
+              <li><a href="implementation.html#multimodal_rag">Multimodal RAG</a></li>
+              <li><a href="implementation.html#geographic_map">Geographic Map</a></li>
+              <li><a href="implementation.html#task_management">Task Management</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="testing.html"><span>Testing</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -136,84 +140,593 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Packages Frameworks Section -->
-    <section id="packages_frameworks" class="packages_frameworks section">
+<!-- Project Structure Section -->
+<section id="project_structure" class="implementation section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Project Structure</h2>
+  </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Packages&amp;Frameworks</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur&nbsp;</p>
-      </div><!-- End Section Title -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <p style="font-size: 20px;">
+          The ChatLincs system’s project structure is cleanly divided into a <strong>frontend presentation layer</strong> and a <strong>backend service layer</strong>, promoting separation of concerns and facilitating scalability, testability, and maintainability.
+        </p>
+        <p style="font-size: 18px;">&nbsp;</p>
+        <h4>🖥️ <strong>Frontend Architecture (<code>/frontend</code>)</strong></h4>
+        <p style="font-size: 18px;">
+          The frontend follows a <strong>component-driven development paradigm</strong> using <strong>React</strong> with <strong>Next.js</strong>, enabling <strong>server-side rendering (SSR)</strong> and <strong>route-based code splitting</strong> for optimized performance.
+        </p>
+        <h5>Key Layers and Modules:</h5>
+        <ul style="font-size: 18px;">
+          <li><strong><code>/src/app/</code></strong><br>
+          Implements the <strong>application shell</strong> and <strong>routing layer</strong>, aligning with the Next.js App Router structure. Key UI workflows (e.g., chat interface, video-chat interaction, document upload) are defined here using <strong>functional components</strong> and <strong>TypeScript for static typing</strong>.</li>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <li><strong><code>/src/components/</code></strong><br>
+          Contains <strong>presentation components</strong> (UI primitives and widgets), adhering to the <strong>DRY</strong> principle and promoting <strong>UI reusability</strong>.</li>
 
-        <div class="row gy-4">
+          <li><strong><code>/public/</code></strong><br>
+          Serves as the <strong>static content delivery layer</strong>, holding global assets exposed via CDN paths.</li>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card-item">
-              <div class="card-img">
-                <img src="assets/img/misc/misc-1.webp" class="img-fluid" alt="Card Image" loading="lazy">
-                <div class="card-overlay">
-                  <div class="card-overlay-content">
-                    <h4>Creative Design</h4>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                    <a href="#" class="btn-link"><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content">
-                <span class="card-category">Design</span>
-                <h3>Modern Interface Solutions</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
+          <li><strong>Configurations (<code>tsconfig</code>, <code>tailwind.config</code>, <code>next.config</code>)</strong><br>
+          Define build behavior, design tokens, and compile-time constraints, improving <strong>developer experience (DX)</strong> and <strong>code quality assurance</strong>.</li>
+        </ul>
+        <p style="font-size: 18px;">&nbsp;</p>
+        <h4>🔌 <strong>Backend Architecture (<code>/backend</code>)</strong></h4>
+        <p style="font-size: 18px;">
+          The backend is implemented in <strong>Python</strong>, structured in accordance with <strong>microservice-oriented principles</strong>, exposing RESTful endpoints via <strong>Flask</strong>. It integrates with multiple ML pipelines and supports <strong>asynchronous processing</strong>, <strong>modular data flow</strong>, and <strong>containerized deployment</strong>.
+        </p>
+        <h5>Core Modules:</h5>
+        <ul style="font-size: 18px;">
+          <li><strong><code>/app/services/</code></strong><br>
+          Encapsulates domain logic related to multimodal data processing, including <strong>embedding generation</strong>, <strong>semantic search</strong>, and <strong>video/audio feature extraction</strong>. Promotes <strong>Single Responsibility Principle (SRP)</strong> and is designed to be unit-testable.</li>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card-item">
-              <div class="card-img">
-                <img src="assets/img/misc/misc-2.webp" class="img-fluid" alt="Card Image" loading="lazy">
-                <div class="card-overlay">
-                  <div class="card-overlay-content">
-                    <h4>Web Development</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    <a href="#" class="btn-link"><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content">
-                <span class="card-category">Development</span>
-                <h3>Responsive Web Applications</h3>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
+          <li><strong><code>/app/routes.py</code></strong><br>
+          Functions as the <strong>API routing layer</strong>, binding HTTP routes to corresponding service handlers. Serves as the <strong>controller</strong> in a pseudo-MVC setup.</li>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="card-item">
-              <div class="card-img">
-                <img src="assets/img/misc/misc-3.webp" class="img-fluid" alt="Card Image" loading="lazy">
-                <div class="card-overlay">
-                  <div class="card-overlay-content">
-                    <h4>Digital Marketing</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident</p>
-                    <a href="#" class="btn-link"><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content">
-                <span class="card-category">Marketing</span>
-                <h3>Strategic Digital Solutions</h3>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus.</p>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
+          <li><strong><code>/app/utils/</code></strong><br>
+          Provides helper methods and low-level utilities, reducing code duplication across services.</li>
 
-        </div>
+          <li><strong><code>/ollama-models/</code></strong><br>
+          Dedicated to LLM model integration, possibly supporting <strong>model inference endpoints</strong>, or external model runtime.</li>
 
+          <li><strong><code>/shared_data/</code>, <code>/uploads/</code></strong><br>
+          Implements <strong>shared memory structures</strong> and <strong>transient file storage</strong>, supporting inter-module communication and persistence.</li>
+
+          <li><strong><code>docker-compose.yml</code></strong><br>
+          Defines <strong>multi-container orchestration</strong>, supporting reproducible deployment across environments. Enables horizontal scalability and integration with vector databases or external APIs.</li>
+
+          <li><strong><code>run.py</code></strong><br>
+          Acts as the <strong>application entrypoint</strong>, bootstrapping the Flask app and initializing critical resources.</li>
+        </ul>
       </div>
+    </div>
 
-    </section><!-- /Packages Frameworks Section -->
+  </div>
+</section> <!-- Project Structure Section -->
+
+
+<!-- Features Section -->
+<section id="features" class="implementation section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Features</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-12">
+        <ul style="font-size: 18px; line-height: 1.8;">
+          <li><strong>Video Interaction</strong>: AI-supported queries and discussions about video content.</li>
+          <li><strong>Multimodal RAG</strong>: AI-driven insights from images, text, and audio.</li>
+          <li><strong>Geographic Map View</strong>: Interactive map visualization of stored data.</li>
+          <li><strong>Task Management (Kanban Board)</strong>: Prioritize tasks, assign categories, and track progress intuitively.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section> <!-- Features Section -->
+
+<!-- Chat with Video Section -->
+<section id="chat_with_video" class="implementation section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Video Interaction</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <p style="font-size: 20px;">
+      This module enables intelligent interaction with videos through a multimodal LLM pipeline. It supports video upload, transcription, frame extraction, embedding generation, vector database storage, and semantic retrieval via user queries.
+    </p>
+    <img src="./assets/img/implementation/structure2.jpg" alt="Structure" class="img-fluid" />
+
+    <p style="font-size: 18px;">&nbsp;</p>
+
+    <h4><strong>1. Video Preprocessing</strong></h4>
+    <p style="font-size: 18px;">For convenient video uploads, we utilized Python libraries including <code>pytubefix</code> and <code>youtube_transcript_api</code> to enable seamless streaming and downloading of YouTube videos directly.</p>
+
+    <p style="font-size: 18px;">The video preprocessing step addresses three distinct scenarios based on the availability of video transcripts:</p>
+    <ul style="font-size: 18px;">
+      <li><strong>Case 1</strong>: Both video and transcript are available.</li>
+      <li><strong>Case 2</strong>: Video is available without a transcript.</li>
+      <li><strong>Case 3</strong>: Video without any spoken language (e.g., silent videos or videos with only background music).</li>
+    </ul>
+    <p>&nbsp;</p>
+
+    <h5 style="font-size: 18px;">📄 Case 1: Video with Transcript</h5>
+    <p style="font-size: 18px;">Video transcripts from platforms like YouTube typically follow the <strong>WEBVTT</strong> format, structured as sequential text segments associated with specific timestamps:</p>
+
+    <pre><code>
+WEBVTT
+
+00:00:03.620 --> 00:00:06.879
+As I look back on the mission that we've had here
+
+00:00:06.879 --> 00:00:10.559
+on the International Space Station,
+I'm proud to have been a part of much of
+
+00:00:10.559 --> 00:00:13.679
+the science activities that happened over the last
+
+00:00:13.680 --> 00:00:14.420
+two months.
+    </code></pre>
+
+    <p style="font-size: 18px;">We process this format by associating each textual segment with a corresponding central video frame. Frames are extracted using the <code>OpenCV (cv2)</code> library at timestamps calculated as the midpoint of the transcript intervals.</p>
+    <pre><code class="language-python">for idx, transcript in enumerate(trans):
+    start_time_ms = str2time(transcript.start)
+    end_time_ms = str2time(transcript.end)
+
+    mid_time_ms = (end_time_ms + start_time_ms) / 2
+
+    text = transcript.text.replace("\n", ' ')
+
+    video.set(cv2.CAP_PROP_POS_MSEC, mid_time_ms)
+    success, frame = video.read()
+    if success:
+
+        image = maintain_aspect_ratio_resize(frame, height=350)
+
+        img_fname = f'frame_{idx}.jpg'
+        img_fpath = osp.join(
+            path_to_save_extracted_frames, img_fname
+        )
+        cv2.imwrite(img_fpath, image)
+
+        metadata = {
+            'extracted_frame_path': img_fpath,
+            'transcript': text,
+            'video_segment_id': idx,
+            'video_path': path_to_video,
+            'mid_time_ms': mid_time_ms,
+        }
+        metadatas.append(metadata)
+</code></pre>
+    <p style="font-size: 18px;">&nbsp;</p>
+
+    <h5 style="font-size: 18px;">📄 Case 2: Video Available Without Transcript</h5>
+    <p style="font-size: 18px;">When the transcript is unavailable, we generate transcripts using OpenAI's <strong>Whisper</strong> model for automatic speech recognition (ASR):</p>
+    <ol>
+      <li>Extract audio track from the video using <code>moviepy</code>.</li>
+      <li>Perform speech-to-text transcription with Whisper (<code>small</code> model), translating into English if necessary.</li>
+      <li>Generate a new WEBVTT-format transcript file.</li>
+      <li>Apply frame extraction and metadata generation as described in Case 1.</li>
+    </ol>
+    <pre><code class="language-python">model = whisper.load_model("small")
+options = dict(task="translate", best_of=1, language='en')
+results = model.transcribe(extracted_audio_file, **options)
+vtt = getSubs(results["segments"], "vtt")
+generated_trans = osp.join(video_dir, 'generated_transcript.vtt')
+</code></pre>
+    <p style="font-size: 18px;">&nbsp;</p>
+    <h5 style="font-size: 18px;">📄 Case 3: Video Without Spoken Language (Silent Videos)</h5>
+    <p style="font-size: 18px;">For silent videos, we utilize a Large Vision-Language Model (<strong>LLaVA-7b</strong>) to automatically generate descriptive captions for frames extracted at regular intervals.</p>
+
+    <pre><code class="language-python"># generate caption using lvlm_inference
+# b64_image = encode_image(img_fpath)
+caption = ollama_inference("Can you describe the image?", img_fpath)
+
+metadata = {
+    'extracted_frame_path': img_fpath,
+    'transcript': caption,
+    'video_segment_id': idx,
+    'video_path': path_to_video,</code></pre>
+    <p>&nbsp;</p>
+
+    <h4> <strong>2. Multimodal Embedding using BridgeTower</strong></h4>
+      <img src="./assets/img/implementation/bridgetower.png" alt="BridgeTower Embedding Code" class="img-fluid" />
+      <p style="font-size: 18px;">We leverage the <strong>BridgeTower</strong> model for generating multimodal embeddings. BridgeTower employs a dual-tower transformer architecture:</p>
+    <ul>
+      <li><strong>Left Tower</strong>: Text Transformer (text input).</li>
+      <li><strong>Right Tower</strong>: Vision Transformer (image patches).</li>
+      <li><strong>Cross-Attention Blocks</strong>: Produce joint embeddings from textual and visual representations.</li>
+    </ul>
+
+    <pre><code class="language-python">def bt_embedding_local(prompt, base64_image):
+    processor = BridgeTowerProcessor.from_pretrained("BridgeTower/bridgetower-large-itm-mlm-itc")
+    model = BridgeTowerForContrastiveLearning.from_pretrained("BridgeTower/bridgetower-large-itm-mlm-itc")
+
+    MAX_LENGTH = 512
+    tokens = processor.tokenizer(prompt, return_tensors="pt", truncation=True, max_length=MAX_LENGTH)
+    prompt = processor.tokenizer.decode(tokens["input_ids"][0])
+
+    message = {"text": prompt}
+    image = None
+
+    if base64_image:
+        if not isBase64(base64_image):
+            raise TypeError("image input must be in base64 encoding!")
+        image_data = base64.b64decode(base64_image)
+        image = Image.open(io.BytesIO(image_data)).convert("RGB")
+
+    encoding = processor(image, prompt, return_tensors="pt") if image else processor(text=prompt, return_tensors="pt")
+
+    input_shape = encoding["input_ids"].shape[1] if "input_ids" in encoding else 0
+    pixel_shape = encoding["pixel_values"].shape[1] if "pixel_values" in encoding else 0
+
+    print(f"input_ids shape: {input_shape}, pixel_values shape: {pixel_shape}")
+
+    outputs = model(**encoding)
+    return outputs.text_embeds[0].detach().cpu().numpy().tolist()
+
+</code></pre>
+      <p style="font-size: 18px;">We transformed the processed video into image-text pairs and input them into BridgeTower, obtaining 512-dimensional embeddings that are stored within a shared multimodal semantic space.</p>
+
+      <p>&nbsp;</p>
+    <h4><strong>3. Data Ingestion into LanceDB</strong></h4>
+    <p style="font-size: 18px;">We utilize <strong>LanceDB</strong> as our vector database, storing multimodal embeddings for efficient semantic retrieval:</p>
+
+    <pre><code class="language-python"># Ingest data into lanceDB
+# initialize an BridgeTower embedder
+embedder = BridgeTowerEmbeddings()
+
+_ = MultimodalLanceDB.from_text_image_pairs(
+    texts=updated_video_trans,
+    image_paths=video_img_path,
+    embedding=embedder,
+    metadatas=video_metadata,
+    connection=db,
+    table_name=TBL_NAME,
+    mode="overwrite",
+)
+</code></pre>
+    <p>&nbsp;</p>
+    <p style="font-size: 18px;">Additionally, we offer a configurable <strong>Transcript Augmentation</strong> feature, allowing users to expand the contextual scope of each frame's transcript. The parameter <code>n</code> specifies the number of neighboring segments to include:</p>
+
+    <pre><code class="language-python">n = int(request.form.get('n',6))
+updated_video_trans = [
+    ' '.join(video_trans[i - int(n / 2): i + int(n / 2)]) if i - int(n / 2) >= 0 else
+    ' '.join(video_trans[0: i + int(n / 2)]) for i in range(len(video_trans))
+]
+</code></pre>
+    <p>&nbsp;</p>
+    <h4><strong>4. Multimodal Retrieval using LangChain</strong></h4>
+    <p style="font-size: 18px;">Retrieval leverages semantic similarity search between user queries and the embedded video segments. This retrieval logic integrates LangChain's composable chain architecture for systematic query processing:</p>
+
+    <pre><code class="language-python">client = LocalLLMClient()
+lvlm_inference_module = LVLM(client=client)
+
+# the output of this new chain is a dictionary
+video_rag_chain_with_retrieved_image = (
+        RunnableParallel({
+            "retrieved_results": retriever_module,
+            "user_query": RunnablePassthrough()
+        })
+        | prompt_processing_module
+        | RunnableParallel({
+    'final_text_output': lvlm_inference_module,
+    'input_to_lvlm': RunnablePassthrough()
+})
+)
+</code></pre>
+    <p>&nbsp;</p>  </div>
+</section>
+
+<!-- Multimodal RAG Section -->
+<section id="multimodal_rag" class="implementation section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Multimodal RAG</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <p style="font-size: 20px;">
+      The overall architecture and implementation strategy for our Multimodal Retrieval-Augmented Generation (RAG) system closely mirrors the approach used in the "Chat with Video" module. The fundamental idea is to integrate multimodal data—including images, audio clips, and videos—into a unified semantic space. To achieve this, we employ a powerful multimodal embedding model, <strong>ImageBind</strong>, coupled with the vector database <strong>Weaviate</strong>, enabling effective multimodal indexing and retrieval.
+    </p>
+      <img src="./assets/img/implementation/structure0.jpg" alt="Structure" class="img-fluid" />
+
+
+    <p>&nbsp;</p>
+    <h4> <strong>1. Multimodal Data Indexing with Weaviate</strong></h4>
+    <p style="font-size: 18px;">
+      The first phase of the implementation involves indexing multimodal content by transforming each data modality into vector representations using <strong>ImageBind embeddings</strong>. These embeddings are then stored in <strong>Weaviate</strong>, a high-performance, scalable vector database designed specifically for multimodal search scenarios.
+    </p>
+
+    <p style="font-size: 18px;">
+      The following code snippet demonstrates how a new collection with multimodal vectorization is created in Weaviate:
+    </p>
+
+    <pre><code class="language-python">
+# Check if the specified collection already exists
+if not client.collections.exists(collection_name):
+    # Create a new multimodal-enabled collection
+    client.collections.create(
+        name=collection_name,
+        vectorizer_config=weaviate.classes.config.Configure.Vectorizer.multi2vec_bind(
+            audio_fields=["audio"],
+            image_fields=["image"],
+            video_fields=["video"],
+        )
+    )
+    print(f"Collection '{collection_name}' created.")
+    </code></pre>
+
+    <p style="font-size: 18px;"><strong>Detailed Explanation:</strong></p>
+    <ul style="font-size: 18px;">
+      <li>We verify the existence of the specified collection in Weaviate to avoid conflicts or duplication.</li>
+      <li>The <code>multi2vec_bind</code> configuration from Weaviate leverages ImageBind to generate embeddings across three modalities—<strong>audio</strong>, <strong>image</strong>, and <strong>video</strong>—ensuring that all data types are represented uniformly within a shared semantic space.</li>
+      <li>The fields <code>audio_fields</code>, <code>image_fields</code>, and <code>video_fields</code> explicitly define which schema fields should be processed for each modality.</li>
+    </ul>
+
+    <p>&nbsp;</p>
+    <h4> <strong>2. Multimodal Retrieval Process</strong></h4>
+    <p style="font-size: 18px;">
+      Upon receiving a user query, the system leverages multimodal similarity search within <strong>Weaviate's vector space</strong>. This retrieval capability supports not only traditional text-based queries but also multimodal queries, enabling <strong>image-to-media</strong>, <strong>audio-to-media</strong>, and <strong>video-to-media</strong> search functionality. This significantly enhances user interaction by allowing versatile and intuitive queries.
+    </p>
+
+    <p style="font-size: 18px;">Below is the detailed implementation of multimodal retrieval logic:</p>
+
+    <pre><code class="language-python">
+# Iterate over available collections and schema properties
+for coll_name, collection in collections:
+    schema = client.collections.export_config(coll_name)
+    available_properties = [prop.name for prop in schema.properties]
+
+    # Define relevant properties to return for retrieved objects
+    return_properties = [
+        prop for prop in ['name', 'path', 'mediaType', 'collection', 'image', 'audio', 'video']
+        if prop in available_properties
+    ]
+
+    # Perform retrieval based on provided query type and media content
+    if file_base64 and file_query_type:
+        if file_query_type == "near_image":
+            response_file = collection.query.near_image(
+                near_image=file_base64,
+                return_properties=return_properties,
+                limit=1
+            )
+
+        elif file_query_type == "near_media":
+            response_file = collection.query.near_media(
+                media=file_base64,
+                media_type=getattr(wq.NearMediaType, media_type),
+                return_properties=return_properties,
+                limit=1
+            )
+    </code></pre>
+
+    <p style="font-size: 18px;"><strong>Detailed Explanation:</strong></p>
+    <ul style="font-size: 18px;">
+      <li><strong>Collection and Schema Exploration:</strong> The retrieval process begins by accessing each relevant collection within Weaviate. It dynamically extracts available schema properties, ensuring adaptability to different collections and avoiding hard-coded assumptions.</li>
+      <li><strong>Property Selection:</strong> The system selectively retrieves properties like <code>name</code>, <code>path</code>, <code>mediaType</code>, and specific modality fields (<code>image</code>, <code>audio</code>, <code>video</code>), providing rich metadata alongside the retrieved embeddings.</li>
+      <li><strong>Multimodal Query Handling:</strong> The retrieval logic handles two main query types:
+        <ul>
+          <li><strong>near_image Query:</strong> Performs similarity searches specifically optimized for image-based queries.</li>
+          <li><strong>near_media Query:</strong> More general and versatile, capable of handling any media type specified by <code>media_type</code>, such as images, videos, or audio clips. This is facilitated by the <code>getattr</code> call, dynamically mapping the media type string to Weaviate’s <code>NearMediaType</code> enum.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section> <!-- Multimodal RAG Section -->
+
+<!-- Geographic Map Section -->
+<section id="geographic_map" class="implementation section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Geographic Map</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <p style="font-size: 20px;">
+      Our geographic map view integrates geospatial search capabilities using the <strong>Geopy</strong> library combined with a <strong>SQLite</strong> database to enable efficient querying and retrieval of multimedia content based on geographic proximity and textual relevance. This feature allows users to intuitively visualize and explore content geographically, providing valuable spatial insights into multimedia data.
+    </p>
+
+    <p>&nbsp;</p>
+    <h4> <strong>1. Data Retrieval from SQLite Database</strong></h4>
+    <p style="font-size: 18px;">
+      We first establish a connection to our SQLite database, accessing multimedia records stored in the <code>media</code> table. Each record typically contains multimedia file metadata, including:
+    </p>
+    <ul style="font-size: 18px;">
+      <li>File identifier (<code>id</code>)</li>
+      <li>File path (<code>file_path</code>)</li>
+      <li>Description text (<code>description</code>)</li>
+      <li>Location information (<code>address</code>, <code>latitude</code>, <code>longitude</code>)</li>
+    </ul>
+
+    <p style="font-size: 18px;">The following code demonstrates connecting and retrieving data from the SQLite database:</p>
+    <pre><code class="language-python">
+import sqlite3
+
+# Connect to the SQLite database
+conn = sqlite3.connect(db_path)
+cursor = conn.cursor()
+
+# Execute SQL query to retrieve all media records
+cursor.execute('SELECT * FROM media')
+    </code></pre>
+
+    <p>&nbsp;</p>
+    <h4> <strong>2. Geospatial Filtering with Geopy</strong></h4>
+    <p style="font-size: 18px;">
+      After fetching multimedia records from the database, we filter the results based on geospatial proximity using the Geopy library's <code>geodesic</code> distance calculation. This approach efficiently identifies content within a specified radius (in kilometers) from a given geographic coordinate (<code>latitude</code> and <code>longitude</code>).
+    </p>
+
+    <p style="font-size: 18px;"><strong>Detailed steps:</strong></p>
+    <ul style="font-size: 18px;">
+      <li>Ensure each media record includes valid latitude and longitude.</li>
+      <li>Use Geopy’s <code>geodesic</code> method to compute distance from the user's location.</li>
+      <li>Filter records within a target radius and optionally match a keyword in the description.</li>
+    </ul>
+
+    <p style="font-size: 18px;">Here is the complete and clearly documented implementation:</p>
+    <pre><code class="language-python">
+from geopy.distance import geodesic
+
+results = []
+
+# Iterate through all media entries fetched from the database
+for row in cursor.fetchall():
+    file_id, file_path, description, address, lat, lon = row
+
+    # Skip records with missing geographic coordinates
+    if lat is None or lon is None:
+        continue
+
+    # Calculate geographic distance between user-specified point and current media location
+    distance = geodesic((latitude, longitude), (lat, lon)).km
+
+    # Check if the media item is within the defined radius and optionally matches the keyword
+    if distance <= radius_km and (keyword is None or keyword.lower() in description.lower()):
+        results.append({
+            'id': file_id,
+            'file_path': file_path,
+            'description': description,
+            'address': address,
+            'latitude': lat,
+            'longitude': lon,
+            'distance_km': distance
+        })
+    </code></pre>
+
+    <p>&nbsp;</p>
+    <h4> <strong>3. Detailed Explanation of Code Functionality</strong></h4>
+    <ul style="font-size: 18px;">
+      <li><strong>Database Connectivity (<code>sqlite3</code>):</strong> Provides lightweight and reliable storage for local metadata, ideal for media indexing and spatial queries in small-scale applications.</li>
+      <li><strong>Geospatial Computation (<code>Geopy</code>):</strong> Uses <code>geodesic</code> to calculate the most accurate distance across Earth’s surface between two coordinates.</li>
+      <li><strong>Conditional Filtering and Keyword Matching:</strong> Allows combined location-aware and keyword-aware searches, delivering rich, contextually relevant, and geographically nearby results.</li>
+    </ul>
+  </div>
+</section> <!-- Geographic Map Section -->
+
+<!-- Task Management Section -->
+<section id="task_management" class="implementation section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Task Management</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <p style="font-size: 20px;">
+      The task management module supports the full lifecycle of environmental action items. It leverages a <strong>Kanban-style interface</strong> with three columns—<code>To Do</code>, <code>In Progress</code>, and <code>Done</code>—to visually organize and track tasks across different stages. The core logic is built using <strong>React</strong> with state hooks and <strong>@hello-pangea/dnd</strong> for drag-and-drop functionality.
+    </p>
+
+    <p>&nbsp;</p>
+    <h4> <strong>1. Drag-and-Drop with Status Update and Completion Sync</strong></h4>
+    <p style="font-size: 18px;">
+      A highlight of this implementation is the intuitive drag-and-drop feature that not only reorders tasks but also updates their statuses and associated boolean flags. For instance, when a task is moved to the <code>Done</code> column, the system automatically marks it as completed:
+    </p>
+
+    <pre><code class="language-tsx">
+if (destination.droppableId === "done") {
+  movedTask.isCompleted = true
+} else if (source.droppableId === "done") {
+  movedTask.isCompleted = false
+}
+    </code></pre>
+
+    <p style="font-size: 18px;">
+      This logic ensures consistency between visual status and internal boolean flags, simplifying downstream filtering and display.
+    </p>
+
+    <p>&nbsp;</p>
+    <h4> <strong>2. Dynamic Task State Management</strong></h4>
+    <p style="font-size: 18px;">
+      Tasks are managed via React’s <code>useState</code>, allowing real-time updates and reactivity. Task creation, editing, deletion, and toggling completion are all handled through dedicated handler functions. For example, toggling a task's completion status updates both its <code>isCompleted</code> flag and status conditionally:
+    </p>
+
+    <pre><code class="language-tsx">
+toggleTaskCompletion = (taskId: string) => {
+  setTasks(tasks.map((task) =>
+    task.id === taskId
+      ? { ...task, isCompleted: !task.isCompleted, status: !task.isCompleted ? "done" : task.status }
+      : task,
+  ))
+}
+    </code></pre>
+
+    <p style="font-size: 18px;">
+      This ensures tasks manually marked as completed are synchronized with the visual <code>Done</code> column, even if not dragged there.
+    </p>
+
+    <p>&nbsp;</p>
+    <h4> <strong>3. Task Creation and Dialog-Based UX</strong></h4>
+    <p style="font-size: 18px;">
+      New tasks can be added via a modal dialog with a clear form interface. The task data is partially pre-filled with sensible defaults (e.g., medium priority, false <code>isCompleted</code>) and validated before being added to the state:
+    </p>
+
+    <pre><code class="language-tsx">
+if (newTask.title && newTask.description) {
+  setTasks([...tasks, { ...newTask, id: Date.now().toString(), status: "todo", isCompleted: false } as Task])
+}
+    </code></pre>
+
+    <p style="font-size: 18px;">
+      This improves UX by preventing incomplete task submissions and ensuring each task has a unique identifier based on a timestamp.
+    </p>
+
+    <p>&nbsp;</p>
+    <h4> <strong>4. Modal-Based Task Editing</strong></h4>
+    <p style="font-size: 18px;">
+      Editing an existing task is achieved through a separate dialog modal that pre-fills the form with the selected task’s data. Updates are committed to the state array by matching the task ID:
+    </p>
+
+    <pre><code class="language-tsx">
+setTasks(tasks.map((task) => (task.id === editingTask.id ? editingTask : task)))
+    </code></pre>
+
+    <p style="font-size: 18px;">
+      This modular modal approach ensures minimal context switching for users and aligns with modern HCI patterns for in-place editing.
+    </p>
+
+    <p>&nbsp;</p>
+    <h4> <strong>5. Visual Design and Priority Tags</strong></h4>
+    <p style="font-size: 18px;">
+      Each task card includes colored priority tags, deadline, assignee, and category info for easy scanning. Priority levels are clearly encoded with contextual background colors:
+    </p>
+
+    <pre><code class="language-tsx">
+&lt;span className={`px-2 py-1 text-xs font-semibold rounded-full ${
+  task.priority === "high" ? "bg-red-100 text-red-800" :
+  task.priority === "medium" ? "bg-yellow-100 text-yellow-800" :
+  "bg-green-100 text-green-800"
+}`}>
+  {task.priority}
+&lt;/span&gt;
+    </code></pre>
+
+    <p style="font-size: 18px;">
+      These visual cues improve task triaging and urgency assessment.
+    </p>
+
+    <p>&nbsp;</p>
+    <h4> <strong>6. Reusable UI Components and Feedback System</strong></h4>
+    <p style="font-size: 18px;">
+      The UI is constructed with reusable components from a design system (<code>shadcn/ui</code>), enhancing maintainability. Toast messages (<code>useToast</code>) are used to confirm user actions, providing real-time feedback for improved user experience:
+    </p>
+
+    <pre><code class="language-tsx">
+toast({
+  title: "Task Deleted",
+  description: "The task has been successfully deleted.",
+  variant: "destructive",
+})
+    </code></pre>
+
+    <p style="font-size: 18px;">
+      This feedback pattern ensures clarity and user confidence across interactions.
+    </p>
+  </div>
+</section> <!-- Task Management Section -->
+
+
+
+
+
 
   </main>
 
@@ -225,7 +738,7 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">Chatlinc</span>
           </a>
-          <p>This is the report website of Team 12's Project, in partnership with NTTDATA, for the COMP0016 module.</p>
+          <p style="font-size: 18px;">This is the report website of Team 12's Project, in partnership with NTTDATA, for the COMP0016 module.</p>
           <div class="social-links d-flex mt-4">
             <a href="https://github.com/Hao-Hao211/ChatLincs.git"><i class="bi bi-github"></i></a>
           </div>
@@ -254,14 +767,14 @@
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
 
-          <p> </p>
+          <p style="font-size: 18px;"> </p>
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Chatlinc</strong> <span>All Rights Reserved</span></p>
+      <p style="font-size: 18px;">© <span>Copyright</span> <strong class="px-1 sitename">Chatlinc</strong> <span>All Rights Reserved</span></p>
 
     </div>
 
@@ -282,6 +795,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Prism.js Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 
 </body>
 
