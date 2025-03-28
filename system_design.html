@@ -77,19 +77,22 @@
           </li>
           <li class="dropdown"><a href="system_design.html" class="active"><span>System Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="system_design.html#system_architecture">System Architecture</a></li>
+              <li><a href="system_design.html#architecture">System Architecture</a></li>
               <li><a href="system_design.html#design_patterns">Design Patterns</a></li>
-              <li><a href="system_design.html#site_map">Site Map</a></li>
-              <li><a href="system_design.html#data_storage">Data Storage</a></li>
+              <li><a href="system_design.html#api">APIs Definition</a></li>
+              <li><a href="system_design.html#multimodal_backend">Multimodal Backend</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="implementation.html"><span>Implementation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="implementation.html#packages_frameworks">Packages&amp;Frameworks</a></li>
-              <li><a href="implementation.html#">Dropdown 2</a></li>
-              <li><a href="implementation.html#">Dropdown 3</a></li>
-              <li><a href="implementation.html#">Dropdown 4</a></li>
+              <li><a href="implementation.html#project_structure">Project structure</a></li>
+              <li><a href="implementation.html#features">Features</a></li>
+              <li><a href="implementation.html#chat_with_video">Chat with Video</a></li>
+              <li><a href="implementation.html#multimodal_rag">Multimodal RAG</a></li>
+              <li><a href="implementation.html#geographic_map">Geographic Map</a></li>
+              <li><a href="implementation.html#task_management">Task Management</a></li>
             </ul>
+          </li>
           </li>
           <li class="dropdown"><a href="testing.html"><span>Testing</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -136,204 +139,420 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- System Architecture Section -->
-    <section id="design_patterns-2" class="design_patterns-2 section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>System Architecture</h2>
+   <!-- Architecture Section -->
+<section id="architecture" class="about-2 section architecture">
 
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>System Architecture</h2>
+  </div><!-- End Section Title -->
 
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2" data-aos="fade-up" data-aos-delay="400">
-            <div class="swiper init-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  },
-                  "breakpoints": {
-                    "320": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 40
-                    },
-                    "1200": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 1
-                    }
-                  }
-                }
-              </script>
-              <div class="swiper-wrapper" id="swiper-wrapper-d2739be5d5554296" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-747px, 0px, 0px); transition-delay: 0ms;">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h4><strong>High-Level System Overview</strong></h4>
+    <p style="font-size: 20px;">
+      The multimodal Retrieval-Augmented Generation (RAG) system employs a client-server architecture, clearly delineating responsibilities into frontend and backend subsystems. These subsystems interact via a standardized RESTful API interface, adhering to modular software engineering best practices. A specialized vector database facilitates efficient storage, indexing, and retrieval of embedding vectors, essential for ensuring high-performance information retrieval and response generation.
+    </p>
 
-                <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 3" data-swiper-slide-index="0" style="width: 746px; margin-right: 1px;">
-                  <img src="assets/img/img_h_7.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3" data-swiper-slide-index="1" style="width: 746px; margin-right: 1px;">
-                  <img src="assets/img/img_h_8.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide" role="group" aria-label="3 / 3" data-swiper-slide-index="2" style="width: 746px; margin-right: 1px;">
-                  <img src="assets/img/img_h_6.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-              <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
-              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-            </div>
-          </div>
-          <div class="col-lg-4 order-lg-1">
+    <!-- Architecture Diagram -->
+    <div class="text-center my-4">
+      <img src="./assets/img/architecture/architecture.png" alt="System Architecture Overview" class="img-fluid" style="max-width: 100%; height: auto;" />
+    </div>
 
-            <h1 class="mb-4" data-aos="fade-up">
-              Excepteur sint occaecat cupidatat non proident
-            </h1>
-            <p data-aos="fade-up">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated they
-              live in Bookmarksgrove right at the coast of the Semantics, a large
-              language ocean.
-            </p>
-            <p class="mt-5" data-aos="fade-up">
+    <hr class="my-4">
 
-            </p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /System Architecture Section -->
+    <h4><strong>Frontend Architecture</strong></h4>
+    <p style="font-size: 18px;">
+      The <strong>frontend</strong> component is implemented using a Single-Page Application (SPA) architecture based on <strong>React</strong> and <strong>TypeScript</strong>. This structure follows modern web development principles, such as modular component design, reactive state management, and responsive user interfaces.
+    </p>
+    <ul style="font-size: 18px;">
+      <li>Capturing user interactions and query inputs.</li>
+      <li>Initiating asynchronous requests to backend services through well-defined API endpoints.</li>
+      <li>Dynamically displaying retrieved data and generated responses to users through intuitive, user-friendly interfaces.</li>
+    </ul>
+    <p style="font-size: 18px;">
+      This modular frontend design enhances maintainability, allowing for seamless integration of future features and efficient troubleshooting.
+    </p>
 
-    <!-- Design Patterns Section -->
-    <section id="design_patterns" class="design_patterns section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Design Patterns</h2>
+    <hr class="my-4">
 
-      </div><!-- End Section Title -->
+    <h4><strong>Backend Architecture</strong></h4>
+    <p style="font-size: 18px;">
+      The backend architecture is designed around a <strong>Flask-based RESTful API</strong>, embracing a microservice-oriented architectural style that emphasizes clear separation of concerns and high cohesion within modules. The backend's primary responsibilities encompass:
+    </p>
+    <ul style="font-size: 18px;">
+      <li><strong>API Request Management:</strong> Receiving, validating, and preprocessing incoming HTTP requests from the frontend subsystem.</li>
+      <li><strong>Multimodal Embedding Generation:</strong> Employing sophisticated embedding models, notably <strong>BridgeTower-large</strong>, to encode input data into semantic vector representations.</li>
+      <li><strong>Multimodal Inference Engine:</strong> Leveraging <strong>LLaVA-7B</strong> for context-aware multimodal reasoning and response generation based on embedding retrieval results.</li>
+      <li><strong>Data Persistence and Retrieval:</strong> Interfacing with a dedicated vector database optimized for high-dimensional similarity search.</li>
+    </ul>
+    <p style="font-size: 18px;">
+      This structured backend leverages layered software architecture principles, facilitating scalability, maintainability, testability, and clearly defined data processing workflows.
+    </p>
 
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2" data-aos="fade-up" data-aos-delay="400">
-            <div class="swiper init-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  },
-                  "breakpoints": {
-                    "320": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 40
-                    },
-                    "1200": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 1
-                    }
-                  }
-                }
-              </script>
-              <div class="swiper-wrapper" id="swiper-wrapper-d2739be5d5554296" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-747px, 0px, 0px); transition-delay: 0ms;">
+    <hr class="my-4">
 
-                <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 3" data-swiper-slide-index="0" style="width: 746px; margin-right: 1px;">
-                  <img src="assets/img/img_h_7.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3" data-swiper-slide-index="1" style="width: 746px; margin-right: 1px;">
-                  <img src="assets/img/img_h_8.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide" role="group" aria-label="3 / 3" data-swiper-slide-index="2" style="width: 746px; margin-right: 1px;">
-                  <img src="assets/img/img_h_6.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-              <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
-              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-            </div>
-          </div>
-          <div class="col-lg-4 order-lg-1">
+    <h4><strong>Vector Database Layer</strong></h4>
+    <p style="font-size: 18px;">
+      The <strong>vector database</strong> acts as the critical storage and retrieval engine within the system, optimized for rapid indexing and efficient nearest-neighbor similarity searches across high-dimensional embedding vectors. It utilizes advanced indexing techniques to support real-time retrieval performance, significantly enhancing response speed and accuracy in serving multimodal queries.
+    </p>
 
-            <h1 class="mb-4" data-aos="fade-up">
-              Excepteur sint occaecat cupidatat non proident
-            </h1>
-            <p data-aos="fade-up">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated they
-              live in Bookmarksgrove right at the coast of the Semantics, a large
-              language ocean.
-            </p>
-            <p class="mt-5" data-aos="fade-up">
+    <hr class="my-4">
 
-            </p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Design Patterns Section -->
+    <h4><strong>Data Flow and Interaction</strong></h4>
+    <p style="font-size: 18px;">
+      The data processing workflow aligns with standard engineering patterns and consists of clearly defined stages:
+    </p>
+    <ol style="font-size: 18px;">
+      <li><strong>User Input Capture:</strong> Users interact directly with the React frontend, entering queries and selecting input data.</li>
+      <li><strong>Structured Communication:</strong> The frontend issues structured HTTP requests to backend RESTful API endpoints.</li>
+      <li><strong>Backend Processing Pipeline:</strong>
+        <ul>
+          <li>Embedding models generate semantic vector embeddings from input data.</li>
+          <li>The vector database efficiently executes similarity searches to retrieve relevant embeddings.</li>
+          <li>The retrieved embeddings and original query inputs are processed by the multimodal inference engine (LLaVA) to generate a context-sensitive response.</li>
+        </ul>
+      </li>
+      <li><strong>Result Delivery:</strong> The backend packages generated responses into JSON objects and returns them via API responses.</li>
+      <li><strong>User Presentation:</strong> The frontend dynamically renders and presents responses, concluding the interaction loop.</li>
+    </ol>
+  </div>
+</section><!-- /Architecture Section -->
 
-    <!-- Site Map Section -->
-    <section id="site_map" class="site_map section">
+<!-- Design Patterns Section -->
+<section id="design_patterns" class="design_patterns section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Design Patterns</h2>
+  </div><!-- End Section Title -->
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Site Map</h2>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <p style="font-size: 20px;">
+      To enhance code maintainability, scalability, and extensibility, the following software engineering design patterns were strategically employed throughout our multimodal Retrieval-Augmented Generation (RAG) application.
+    </p>
 
-      </div><!-- End Section Title -->
+    <div class="table-responsive my-4">
+      <table class="table table-bordered" style="font-size: 18px;">
+        <thead class="table-light">
+          <tr>
+            <th style="width: 25%;"><strong>Design Pattern</strong></th>
+            <th><strong>Usage in the Project</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Singleton Pattern</strong></td>
+            <td>
+              The embedding models (<code>BridgeTower</code>, <code>ImageBind</code>) and multimodal inference engine (<code>LLaVA</code>) are implemented as singletons. This ensures only one instance of these heavyweight, resource-intensive components is instantiated during runtime, optimizing resource utilization and maintaining consistent behavior.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Facade Pattern</strong></td>
+            <td>
+              The backend Flask API acts as a Facade, simplifying interactions between frontend clients and complex backend subsystems (e.g., embedding models, vector databases, inference engines). This pattern hides internal complexities and provides a clear, unified interface.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Strategy Pattern</strong></td>
+            <td>
+              Different multimedia preprocessing strategies (e.g., handling videos with transcripts, without transcripts, or silent) leverage the Strategy Pattern. This allows the backend to dynamically select suitable strategies based on media type, enhancing flexibility and extensibility.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Observer Pattern</strong></td>
+            <td>
+              Frontend React components follow the Observer Pattern for state management, responding to asynchronous backend updates. Components observe changes in query results and update the UI automatically, ensuring real-time responsiveness and loose coupling.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Chain of Responsibility Pattern</strong></td>
+            <td>
+              The backend inference pipeline applies the Chain of Responsibility pattern. Each stage (embedding, retrieval, inference) handles its dedicated task in a structured workflow, enabling modularity, clarity, and easier troubleshooting.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-      <div class="container">
+    <p style="font-size: 18px;">
+      Additionally, core software design principles were rigorously followed throughout development:
+    </p>
 
-        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-5">
-            <img src="assets/img/about/about-8.webp" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3>Voluptatem dignissimos provident quasi</h3>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-              </p>
+    <ul style="font-size: 18px;">
+      <li><strong>Single Responsibility Principle (SRP):</strong> Each class maintains a clear, focused purpose to improve readability and testability.</li>
+      <li><strong>Don’t Repeat Yourself (DRY):</strong> Code reuse and modularity are enforced across the codebase to reduce redundancy.</li>
+      <li><strong>Refactoring Best Practices:</strong> Proactive cleanup eliminated common code smells such as magic numbers, overly long methods, and tightly coupled logic.</li>
+    </ul>
+  </div>
+</section><!-- /Design Patterns Section -->
 
-            </div>
-          </div>
-        </div>
+<!-- APIs Definition Section -->
+<section id="api" class="api section">
 
-      </div>
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>APIs Definition</h2>
+  </div><!-- End Section Title -->
 
-    </section><!-- /Site Map Section -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-    <!-- Data Storage Section -->
-    <section id="data_storage" class="data_storage section">
+    <p style="font-size: 20px;">
+      This document describes the clearly defined RESTful API endpoints within our system.
+    </p>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Data Storage</h2>
+    <hr class="my-4">
 
-      </div><!-- End Section Title -->
+    <h4><strong>1. Chat Interaction (<code>/chat</code>)</strong></h4>
+    <p style="font-size: 18px;"><strong>Method:</strong> POST</p>
+    <p style="font-size: 18px;"><strong>Description:</strong> Facilitates conversational interactions with multimodal data, supporting user queries accompanied by optional multimedia uploads.</p>
+    <p style="font-size: 18px;"><strong>Request (form data):</strong></p>
+    <ul style="font-size: 18px;">
+      <li><code>query</code> (String, required)</li>
+      <li><code>collection_name</code> (String, optional)</li>
+      <li><code>retrieve</code> (Boolean/String, optional)</li>
+      <li><code>session_id</code> (String, optional)</li>
+      <li><code>uploaded_file</code> (File, optional)</li>
+    </ul>
+    <p style="font-size: 18px;"><strong>Response (JSON):</strong></p>
+    <pre><code class="language-json">
+{
+  "response": "&lt;generated response&gt;",
+  "images": ["&lt;base64-encoded image&gt;", ...],
+  "audios": [
+    {
+      "audio": "&lt;base64-encoded audio&gt;",
+      "transcript": "&lt;audio transcript&gt;"
+    }
+  ],
+  "session_id": "&lt;session identifier&gt;"
+}
+    </code></pre>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <hr class="my-4">
 
-        <div class="row gy-4 align-items-center">
+    <h4><strong>2. Upload File with Geolocation (<code>/new_upload</code>)</strong></h4>
+    <p style="font-size: 18px;"><strong>Method:</strong> POST</p>
+    <p style="font-size: 18px;"><strong>Description:</strong> Allows uploading multimedia files into specified collections, optionally attaching descriptive and geographic metadata.</p>
+    <p style="font-size: 18px;"><strong>Request (form data):</strong></p>
+    <ul style="font-size: 18px;">
+      <li><code>file</code> (File, required)</li>
+      <li><code>collection_name</code> (String, required)</li>
+      <li><code>description</code> (String, optional)</li>
+      <li><code>address</code> (String, optional)</li>
+      <li><code>latitude</code> (Float, optional)</li>
+      <li><code>longitude</code> (Float, optional)</li>
+    </ul>
+    <p style="font-size: 18px;"><strong>Response (JSON):</strong></p>
+    <pre><code class="language-json">
+{
+  "status": "success",
+  "message": "File 'example.jpg' successfully inserted into collection 'example_collection'."
+}
+    </code></pre>
 
-          <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="300">
-            <div class="image-wrapper">
-              <img src="assets/img/about/about-portrait-3.webp" alt="" class="img-fluid rounded-4">
-            </div>
-          </div>
-        </div>
+    <hr class="my-4">
 
-      </div>
+    <h4><strong>3. Retrieve Collections (<code>/collections</code>)</strong></h4>
+    <p style="font-size: 18px;"><strong>Method:</strong> GET</p>
+    <p style="font-size: 18px;"><strong>Description:</strong> Returns a list of available collections from the vector database.</p>
+    <p style="font-size: 18px;"><strong>Response (JSON):</strong></p>
+    <pre><code class="language-json">
+{
+  "collections": ["collection1", "collection2", ...]
+}
+    </code></pre>
 
-    </section><!-- /Data Storage Section -->
+    <hr class="my-4">
+
+    <h4><strong>4. Geographic Search (<code>/new_geo_search</code>)</strong></h4>
+    <p style="font-size: 18px;"><strong>Method:</strong> GET</p>
+    <p style="font-size: 18px;"><strong>Description:</strong> Performs geographic-based searches within specified collections using coordinates, addresses, radius, and optional keywords.</p>
+    <p style="font-size: 18px;"><strong>Request (query parameters):</strong></p>
+    <ul style="font-size: 18px;">
+      <li><code>collection_name</code> (String, required)</li>
+      <li><code>address</code> (String, optional)</li>
+      <li><code>radius</code> (Float, required)</li>
+      <li><code>keyword</code> (String, optional)</li>
+      <li><code>latitude</code> (Float, optional)</li>
+      <li><code>longitude</code> (Float, optional)</li>
+    </ul>
+    <p style="font-size: 18px;"><strong>Response (JSON):</strong></p>
+    <pre><code class="language-json">
+{
+  "results": [ ... ]
+}
+    </code></pre>
+
+    <hr class="my-4">
+
+    <h4><strong>5. Generate Geographic Map (<code>/geo_map</code>)</strong></h4>
+    <p style="font-size: 18px;"><strong>Method:</strong> GET</p>
+    <p style="font-size: 18px;"><strong>Description:</strong> Generates an interactive map displaying geographic search results.</p>
+    <p style="font-size: 18px;"><strong>Request (query parameters):</strong></p>
+    <ul style="font-size: 18px;">
+      <li><code>collection_name</code> (String, required)</li>
+      <li><code>address</code> (String, optional)</li>
+      <li><code>radius</code> (Float, optional, default: 2km)</li>
+      <li><code>keyword</code> (String, optional)</li>
+      <li><code>latitude</code> (Float, optional)</li>
+      <li><code>longitude</code> (Float, optional)</li>
+    </ul>
+    <p style="font-size: 18px;"><strong>Response:</strong> Renders interactive HTML page <code>geo_map.html</code>.</p>
+
+    <hr class="my-4">
+
+    <h4><strong>6. Video Upload and Processing (<code>/upload_video</code>)</strong></h4>
+    <p style="font-size: 18px;"><strong>Method:</strong> POST</p>
+    <p style="font-size: 18px;"><strong>Description:</strong> Handles video downloading, frame extraction, transcript generation, multimodal embedding, and ingestion into the vector database.</p>
+    <p style="font-size: 18px;"><strong>Request (form data):</strong></p>
+    <ul style="font-size: 18px;">
+      <li><code>video_url</code> (String, required)</li>
+      <li><code>video_without_language_sound</code> (Boolean/String, optional)</li>
+      <li><code>n</code> (Integer, optional, default: 6)</li>
+    </ul>
+    <p style="font-size: 18px;"><strong>Response (JSON):</strong></p>
+    <pre><code class="language-json">
+{
+  "status": "success",
+  "video_path": "&lt;stored video path&gt;"
+}
+    </code></pre>
+
+    <hr class="my-4">
+
+    <h4><strong>7. List All Uploaded Videos (<code>/all_uploaded_videos</code>)</strong></h4>
+    <p style="font-size: 18px;"><strong>Method:</strong> GET</p>
+    <p style="font-size: 18px;"><strong>Description:</strong> Lists titles of all videos indexed in the vector database.</p>
+    <p style="font-size: 18px;"><strong>Response (JSON):</strong></p>
+    <pre><code class="language-json">
+{
+  "video_titles": ["video1 title", "video2 title", ...]
+}
+    </code></pre>
+
+    <hr class="my-4">
+
+    <h4><strong>8. Chat with Video Content (<code>/chat_with_video</code>)</strong></h4>
+    <p style="font-size: 18px;"><strong>Method:</strong> POST</p>
+    <p style="font-size: 18px;"><strong>Description:</strong> Enables conversational interaction with indexed video content, retrieving relevant frames and generating semantic responses.</p>
+    <p style="font-size: 18px;"><strong>Request (form data):</strong></p>
+    <ul style="font-size: 18px;">
+      <li><code>video_title</code> (String, required)</li>
+      <li><code>query</code> (String, required)</li>
+    </ul>
+    <p style="font-size: 18px;"><strong>Response (JSON):</strong></p>
+    <pre><code class="language-json">
+{
+  "response": "&lt;generated textual response&gt;",
+  "image": "&lt;retrieved frame path&gt;",
+  "image_base64": "&lt;base64-encoded retrieved frame&gt;"
+}
+    </code></pre>
+
+  </div>
+</section><!-- /APIs Definition Section -->
+
+<!-- Multimodal Backend Section -->
+<section id="multimodal_backend" class="multimodal_backend section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Multimodal Backend Architecture</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <p style="font-size: 20px;">
+      The multimodal backend architecture of our system is structured to robustly handle multimodal data retrieval, embedding, and inference tasks, clearly divided into two primary pipelines: <strong>Multimodal Retrieval-Augmented Generation (RAG)</strong> and <strong>Video-based Conversational Retrieval</strong> (Chat with Video). Both pipelines integrate advanced embedding techniques, dedicated vector storage solutions, and sophisticated language-vision inference models to deliver accurate and meaningful responses to user queries.
+    </p>
+    <hr class="my-4">
+
+    <h4><strong>1. Multimodal Retrieval-Augmented Generation (RAG) Backend Architecture</strong></h4>
+    <p style="font-size: 18px;">
+      The multimodal RAG backend architecture facilitates intelligent retrieval and inference from multimedia file collections, specifically <strong>images</strong> and <strong>audio files</strong>.
+    </p>
+      <img src="./assets/img/architecture/structure0.jpg" alt="System Architecture Overview" class="img-fluid" style="max-width: 100%; height: auto;" />
+
+    <h5 style="font-size: 18px;">Data Input and Retrieval:</h5>
+    <ul style="font-size: 18px;">
+      <li>Multimedia file collections are segmented into two distinct input streams:</li>
+      <ul>
+        <li><strong>Image Retrieval</strong>: Images uploaded by users.</li>
+        <li><strong>Audio Retrieval</strong>: Audio clips uploaded by users.</li>
+      </ul>
+    </ul>
+
+    <h5 style="font-size: 18px;">Embedding Layer:</h5>
+    <ul style="font-size: 18px;">
+      <li>The backend leverages the <strong>ImageBind</strong> multimodal embedding model, which transforms images and audio into unified semantic vectors.</li>
+      <li>This ensures <strong>cross-modal interoperability</strong>, enabling efficient similarity searches across different media types.</li>
+    </ul>
+
+    <h5 style="font-size: 18px;">Vector Database Storage:</h5>
+    <ul style="font-size: 18px;">
+      <li>Embedding vectors are stored in a dedicated <strong>vector database</strong> optimized for high-speed nearest-neighbor semantic searches.</li>
+      <li>This enhances responsiveness for real-time query operations.</li>
+    </ul>
+
+    <h5 style="font-size: 18px;">Multimodal Retrieval and Inference:</h5>
+    <ul style="font-size: 18px;">
+      <li>User queries are embedded via ImageBind and used to query the vector database.</li>
+      <li>Retrieved <strong>audio files</strong> are transcribed using the <strong>Whisper</strong> model to enhance semantic richness.</li>
+      <li>Results and queries are forwarded to <strong>LLaVA-7B</strong> for context-aware response generation.</li>
+    </ul>
+
+    <hr class="my-4">
+
+    <h4><strong>2. Chat with Video Backend Architecture</strong></h4>
+    <p style="font-size: 18px;">
+      The backend pipeline for video-based conversational retrieval addresses scenarios involving diverse video input types and audio/transcript availability.
+    </p>
+      <img src="./assets/img/architecture/structure2.jpg" alt="System Architecture Overview" class="img-fluid" style="max-width: 100%; height: auto;" />
+
+    <h5 style="font-size: 18px;">Video Data Preprocessing:</h5>
+    <ul style="font-size: 18px;">
+      <li><strong>Case 1: Videos with Transcript</strong>
+        <ul>
+          <li>Frames are extracted via <code>cv2</code>, using available transcripts for indexing.</li>
+        </ul>
+      </li>
+      <li><strong>Case 2: Videos without Transcript</strong>
+        <ul>
+          <li>Transcripts are generated using the <strong>Whisper ASR</strong> model.</li>
+          <li>Frames and transcripts are indexed together to form a searchable context base.</li>
+        </ul>
+      </li>
+      <li><strong>Case 3: Videos without Language Audio</strong>
+        <ul>
+          <li>No transcripts are generated. Semantic meaning is derived directly from visual features using <strong>LLaVA</strong>.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h5 style="font-size: 18px;">Multimodal Embedding:</h5>
+    <ul style="font-size: 18px;">
+      <li><strong>BridgeTower-large-itm-mlm-itc</strong> model embeds both <strong>frames</strong> and <strong>transcripts</strong> into unified semantic vectors.</li>
+      <li>This model fuses vision and language using <strong>cross-modal attention</strong>.</li>
+    </ul>
+
+    <h5 style="font-size: 18px;">Vector Database Storage:</h5>
+    <ul style="font-size: 18px;">
+      <li>Embedded frame-text pairs are indexed and stored in a high-performance vector database, supporting semantic retrieval.</li>
+    </ul>
+
+    <h5 style="font-size: 18px;">Retrieval and Ranking:</h5>
+    <ul style="font-size: 18px;">
+      <li>User queries are also embedded through <strong>BridgeTower</strong>.</li>
+      <li>Similarity search retrieves the most relevant frames and contextual segments.</li>
+    </ul>
+
+    <h5 style="font-size: 18px;">Prompt Processing and Inference：</h5>
+    <ul style="font-size: 18px;">
+      <li>Retrieved frame-transcript-query triplets are compiled into structured prompts.</li>
+      <li>Prompts are passed to <strong>LLaVA-7B</strong> for final response generation.</li>
+      <li>Responses are returned to the frontend for rendering.</li>
+    </ul>
+
+  </div>
+</section><!-- /Multimodal Backend Section -->
 
   </main>
 
