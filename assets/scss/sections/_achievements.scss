@@ -1,0 +1,174 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Achievements Section
+--------------------------------------------------------------*/
+.achievements {
+  padding-top: 60px;
+  margin: 30px 0;
+  padding-bottom: 60px;
+
+  .table-responsive {
+    border-radius: 12px;
+    background-color: var(--surface-color);
+  }
+
+  .table {
+    margin-bottom: 0;
+
+    th,
+    td {
+      padding: 20px;
+      text-align: center;
+      vertical-align: middle;
+      border-color: color-mix(in srgb, var(--default-color), transparent 90%);
+      background-color: var(--surface-color);
+      color: var(--default-color);
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+
+    th {
+      border-top: none;
+      background-color: var(--surface-color);
+    }
+
+    .features-column {
+      min-width: 200px;
+
+      h5 {
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        font-size: 4rem;
+        margin: 0;
+      }
+    }
+
+    .plan-column {
+      min-width: 220px;
+      position: relative;
+
+      &.popular {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+
+        .popular-badge {
+          border: 1px solid var(--accent-color);
+          color: var(--accent-color);
+          padding: 4px 15px;
+          border-radius: 20px;
+          font-size: 0.875rem;
+          font-weight: 500;
+          display: inline-block;
+          margin: 0 auto 15px auto;
+        }
+      }
+
+      h4 {
+        margin: 0 0 20px;
+        font-size: 1.25rem;
+      }
+
+      .btn {
+        padding: 8px 24px;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &.btn-outline {
+          border: 2px solid var(--accent-color);
+          color: var(--accent-color);
+          background: transparent;
+
+          &:hover {
+            background-color: var(--accent-color);
+            color: var(--contrast-color);
+          }
+        }
+
+        &.btn-solid {
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+          border: 2px solid var(--accent-color);
+
+          &:hover {
+            background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+            border-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:hover {
+          background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+        }
+
+        td {
+          font-size: 0.9375rem;
+
+          &.feature-name {
+            font-weight: 500;
+          }
+
+          .bi-check-lg {
+            color: #28a745;
+            font-size: 1.25rem;
+          }
+
+          .bi-x-lg {
+            color: #dc3545;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .table {
+      .plan-column {
+        min-width: 180px;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .table-responsive {
+      border-radius: 8px;
+    }
+
+    .table {
+
+      th,
+      td {
+        padding: 15px 10px;
+      }
+
+      .features-column {
+        min-width: 140px;
+      }
+
+      .plan-column {
+        min-width: 140px;
+
+        h4 {
+          font-size: 1.125rem;
+        }
+
+        .btn {
+          padding: 6px 16px;
+          font-size: 0.875rem;
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}

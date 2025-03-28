@@ -1,0 +1,96 @@
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 65px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 53px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  padding-bottom: 60px;
+  position: relative;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--accent-color);
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@import './sections/_hero.scss';
+@import './sections/_clients.scss';
+@import './sections/_abstract.scss';
+@import './sections/_features.scss';
+@import './sections/_video.scss';
+@import './sections/_project_timeline.scss';
+@import './sections/_development_team.scss';
+@import './sections/_project_background.scss';
+@import './sections/_about.scss';
+@import './sections/_project_goals.scss';
+@import './sections/_requirements_gathering.scss';
+@import './sections/_faq.scss';
+@import './sections/_faq-2.scss';
+@import './sections/_personas.scss';
+@import './sections/_use_cases.scss';
+@import './sections/_moscow.scss';
+@import './sections/_about-3.scss';
+@import './sections/_related_projects_review.scss';
+@import './sections/_technology_review.scss';
+@import './sections/_references.scss';
+@import './sections/_design_principles.scss';
+@import './sections/_sketches.scss';
+@import './sections/_prototype.scss';
+@import './sections/_system_architecture.scss';
+@import './sections/_design_patterns.scss';
+@import './sections/_site_map.scss';
+@import './sections/_data_storage.scss';
+@import './sections/_packages_frameworks.scss';
+@import './sections/_testing_strategy.scss';
+@import './sections/_unit_testing.scss';
+@import './sections/_integration_testing.scss';
+@import './sections/_user_testing.scss';
+@import './sections/_achievements.scss';
+@import './sections/_comparison-table-2.scss';
+@import './sections/_comparison-table-3.scss';
+@import './sections/_comparison-table-4.scss';
+@import './sections/_critical_evaluation.scss';
+@import './sections/_future_work.scss';
+@import './sections/_user_manual.scss';
+@import './sections/_deployment_manual.scss';
+@import './sections/_legal_statements.scss';
+@import './sections/_dev_blog.scss';
+@import './sections/_monthly_videos.scss';
+@import './sections/_portfolio-details.scss';

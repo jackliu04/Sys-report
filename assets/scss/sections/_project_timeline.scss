@@ -1,0 +1,109 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Project Timeline Section
+--------------------------------------------------------------*/
+.project_timeline {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .content {
+    padding-right: 30px;
+  }
+
+  .subtitle {
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+  }
+
+  .description {
+    margin-bottom: 30px;
+    color: var(--default-color);
+  }
+
+  .image-grid {
+    display: flex;
+    gap: 15px;
+    height: 450px;
+  }
+
+  .main-image {
+    flex: 0 0 65%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .side-images {
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    img {
+      width: 100%;
+      height: calc(50% - 7.5px);
+      object-fit: cover;
+    }
+  }
+
+  .stats {
+    margin-top: 30px;
+  }
+
+  .stat-item {
+    margin-bottom: 20px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+    line-height: 1;
+  }
+
+  .stat-text {
+    color: var(--heading-color);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 991.98px) {
+    .content {
+      padding-right: 0;
+      margin-bottom: 40px;
+    }
+
+    .image-grid {
+      height: auto;
+      flex-direction: column;
+    }
+
+    .main-image,
+    .side-images {
+      flex: 0 0 100%;
+    }
+
+    .side-images {
+      flex-direction: row;
+
+      img {
+        height: 200px;
+        width: calc(50% - 7.5px);
+      }
+    }
+  }
+}

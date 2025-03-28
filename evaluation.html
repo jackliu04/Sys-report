@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Evaluation - System</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="evaluation-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Chatlinc</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li class="dropdown"><a href="index.html"><span>Home</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="index.html#abstract">Abstract</a></li>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#video">Video</a></li>
+              <li><a href="index.html#project_timeline">Project Timeline</a></li>
+              <li><a href="index.html#development_team">Development Team</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="requirements.html"><span>Requirements</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="requirements.html#project_background">Project Background</a></li>
+              <li><a href="requirements.html#project_goals">Project Goals</a></li>
+              <li><a href="requirements.html#requirements_gathering">Requirements Gathering</a></li>
+              <li><a href="requirements.html#personas">Personas</a></li>
+              <li><a href="requirements.html#use_cases">Use Cases</a></li>
+              <li><a href="requirements.html#moscow">MoSCOW</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="research.html"><span>Research</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="research.html#related_projects_review">Related Projects Review</a></li>
+              <li><a href="research.html#technology_review">Technology Review</a></li>
+              <li><a href="research.html#references">References</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="ui_design.html"><span>UI Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="ui_design.html#design_principles">Design Principles</a></li>
+              <li><a href="ui_design.html#sketches">Sketches</a></li>
+              <li><a href="ui_design.html#prototype">Prototype</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="system_design.html"><span>System Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="system_design.html#system_architecture">System Architecture</a></li>
+              <li><a href="system_design.html#design_patterns">Design Patterns</a></li>
+              <li><a href="system_design.html#site_map">Site Map</a></li>
+              <li><a href="system_design.html#data_storage">Data Storage</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="implementation.html"><span>Implementation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="implementation.html#packages_frameworks">Packages&amp;Frameworks</a></li>
+              <li><a href="implementation.html#">Dropdown 2</a></li>
+              <li><a href="implementation.html#">Dropdown 3</a></li>
+              <li><a href="implementation.html#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="testing.html"><span>Testing</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="testing.html#testing_strategy">Testing Strategy</a></li>
+              <li><a href="testing.html#unit_testing">Unit Testing</a></li>
+              <li><a href="testing.html#integration_testing">Integration Testing</a></li>
+              <li><a href="testing.html#user_testing">User Acceptance Testing</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="evaluation.html" class="active"><span>Evaluation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="evaluation.html#achievements">Achievements</a></li>
+              <li><a href="evaluation.html#critical_evaluation">Critical Evaluation</a></li>
+              <li><a href="evaluation.html#future_work">Future Work</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="appendices.html"><span>Appendices</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="appendices.html#user_manual">User Manual</a></li>
+              <li><a href="appendices.html#deployment_manual">Deployment Manual</a></li>
+              <li><a href="appendices.html#legal_statements">Legal Statements</a></li>
+              <li><a href="appendices.html#dev_blog">Dev Blog</a></li>
+              <li><a href="appendices.html#monthly_videos">Monthly Videos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background position-relative">
+      <div class="container">
+        <h1>Evaluation</h1>
+        <nav class="breadcrumbs">
+          <ol>
+
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Achievements</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="comparison-table">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    <h5>Achievement Table</h5>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                  <td class="feature-name">ID</td>
+                  <td class="feature-name">Requirements</td>
+                  <td class="feature-name">Priority</td>
+                  <td class="feature-name">State</td>
+                  <td class="feature-name">Contributors</td>
+                </tr>
+                <tr>
+                  <td>R1</td>
+                  <td>Apply multimodal RAG for semantic search with text</td>
+                  <td>MUST</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">R2</td>
+                  <td>Apply multimodal RAG for similarity search with image</td>
+                  <td>MUST</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">R3</td>
+                  <td>Store and retrieve text as embeddings in vector database</td>
+                  <td>MUST</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">R4</td>
+                  <td>Store and retrieve images as embeddings in vector database</td>
+                  <td>MUST</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">R5</td>
+                  <td>Chatbot interface with multimodal 'upload to search with' function</td>
+                  <td>MUST</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">R6</td>
+                  <td>Interface for uploading files to database</td>
+                  <td>MUST</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">R7</td>
+                  <td>Integrate chatbot LLM capable of answering text questions</td>
+                  <td>MUST</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">R8</td>
+                  <td>Integrate chatbot LLM capable of analysing images</td>
+                  <td>MUST</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R9</td>
+                  <td>Map view with locations of stored data</td>
+                  <td>SHOULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R10</td>
+                  <td>Store and retrieve audio as embeddings in vector database</td>
+                  <td>SHOULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R11</td>
+                  <td>Store location of uploaded data</td>
+                  <td>SHOULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R12</td>
+                  <td>Able to display retrieved audio files</td>
+                  <td>SHOULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R13</td>
+                  <td>Kanban-style interface supports task prioritization and custom tags</td>
+                  <td>SHOULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R14</td>
+                  <td>Event geotagging for reports</td>
+                  <td>SHOULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R15</td>
+                  <td>Able to display retrieved video files</td>
+                  <td>COULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R16</td>
+                  <td>Store and retrieve video as embeddings in vector database</td>
+                  <td>COULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R17</td>
+                  <td>Apply multimodal RAG for similarity search with audio</td>
+                  <td>COULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R18</td>
+                  <td>Integrate chatbot LLM capable of analysing audio</td>
+                  <td>COULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R19</td>
+                  <td>Apply multimodal RAG for similarity search with video</td>
+                  <td>COULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R20</td>
+                  <td>Integrate chatbot LLM capable of analysing video</td>
+                  <td>COULD</td>
+                  <td><i class="bi bi-check-lg"></i></td>
+                  <td>ALL</td>
+                </tr>
+                <tr>
+                  <td>R21</td>
+                  <td>Measure carbon footprint of the system</td>
+                  <td>COULD</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <br>
+        <p style="font-size: 24px;">Key functionalities:&nbsp; 100% Completed<br>Optional Functionalities:&nbsp; 87.5% Completed</p>
+        <p></p>
+
+      </div>
+    </section><!-- /Achievements Section -->
+
+    <!-- Comparison Table 2 Section -->
+    <section id="comparison-table-2" class="comparison-table-2 section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="comparison-table">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    <h5>Known Bugs</h5>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-name">ID</td>
+                  <td class="feature-name">Bug Description</td>
+                  <td class="feature-name">Priority</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">1</td>
+                  <td>When the user keeps adding new chats, the chat history session may overflow out of the screen</td>
+                  <td>Low</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Comparison Table 2 Section -->
+
+    <!-- Comparison Table 3 Section -->
+    <section id="comparison-table-3" class="comparison-table-3 section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="comparison-table">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    <h5>Individual Contribution Table For Website</h5>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-name">Work Packages</td>
+                  <td class="feature-name">Hao</td>
+                  <td class="feature-name">Jack</td>
+                  <td class="feature-name">Penghui</td>
+                  <td class="feature-name">Ruizhe</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Website Tempate and Setup</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Home</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Video</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Requirement</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Research</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">UI Design</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">System Design</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Implementation</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Testing</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Evaluation and Future Work</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">User and Deployment Manuals</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Legal Issues</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Blog and Monthly Video</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Overall contribution</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Comparison Table 3 Section -->
+
+    <!-- Comparison Table 4 Section -->
+    <section id="comparison-table-4" class="comparison-table-4 section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="comparison-table">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    <h5>Individual Contribution Table For System Artefacts</h5>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                  <th>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-name">Work Packages</td>
+                  <td class="feature-name">Hao</td>
+                  <td class="feature-name">Jack</td>
+                  <td class="feature-name">Penghui</td>
+                  <td class="feature-name">Ruizhe</td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Research and Experiments</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">UI Design</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Coding</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Testing</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Overall contribution</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Comparison Table 4 Section -->
+
+    <!-- Critical Evaluation Section -->
+    <section id="critical_evaluation" class="critical_evaluation section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Critical Evaluation</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <ul class="nav nav-tabs flex-column" role="tablist" data-aos="fade-right" data-aos-delay="200">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-1" role="tab" aria-selected="false" tabindex="-1">
+                  <div class="d-flex align-items-center">
+                    <div class="ms-3">
+                      <h4>User Interface and experience</h4>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-2" role="tab" aria-selected="false" tabindex="-1">
+                  <div class="d-flex align-items-center">
+                    <div class="ms-3">
+                      <h4>Funtionality</h4>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-3" role="tab" aria-selected="false" tabindex="-1">
+                  <div class="d-flex align-items-center">
+
+                    <div class="ms-3">
+                      <h4>Maintainability</h4>
+
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-4" role="tab" aria-selected="true">
+                  <div class="d-flex align-items-center">
+
+                    <div class="ms-3">
+                      <h4>Stability</h4>
+
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-5" role="tab" aria-selected="false" tabindex="-1">
+                  <div class="d-flex align-items-center">
+                    <div class="ms-3">
+                      <h4>Curabitur Aliquet</h4>
+                      <p>Excepteur sint occaecat cupidatat</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+              <div class="tab-pane fade" id="critical_evaluation-tab-1" role="tabpanel">
+                <div class="content-box">
+                  <div class="row g-4">
+                    <div>
+                      <h3>User Interface and experience</h3>
+                      <p style="font-size:20px;">We created a clean, intuitive interface for easy multimedia uploads, geographic visualization, task management, multimodal chat, and video interaction. Users found the UI visually appealing, appreciating its clear navigation, intuitive features, and effective multimodal retrieval capabilities. However, improvements can still be made in mobile responsiveness and optimizing load times, particularly for multimedia content.<br>Overall, our UI/UX receives a rating of Good.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="critical_evaluation-tab-2" role="tabpanel">
+                <div class="content-box">
+                  <div class="row g-4">
+                    <div>
+                      <h3>Funtionality</h3>
+                      <p style="font-size:20px;">Our web application successfully delivers core functionalities, including multimedia data uploads, geographic visualization, task management, multimodal conversational retrieval, and interactive video analysis. All features performed consistently without reported issues during testing and user interactions, demonstrating robust reliability and accuracy across the platform.<br>We give a Very Good rating to our functionality.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="critical_evaluation-tab-3" role="tabpanel">
+                <div class="content-box">
+                  <div class="row g-4">
+                    <div>
+                      <h3>Maintainability</h3>
+                      <p style="font-size:20px;">The system is built with a modular and well-structured codebase, making updates and debugging straightforward. Features like clearly separated components, standardized naming, and clean API integration support long-term scalability and ease of maintenance. Future enhancements can be implemented efficiently without disrupting existing functionality.<br>We give a Good rating to our maintainability.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade active show" id="critical_evaluation-tab-4" role="tabpanel">
+                <div class="content-box">
+                  <div class="row g-4">
+                    <div>
+                      <h3>Stability</h3>
+                      <p style="font-size: 20px;">The application performed reliably throughout testing, with all core features functioning as expected. Only one minor, low-priority bug was identified—an overflow in the chat history panel when too many sessions are added. This issue does not affect core functionality and can be easily resolved in future updates.<br>We give a&nbsp;Adequate rating to our stability.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="critical_evaluation-tab-5" role="tabpanel">
+                <div class="content-box">
+                  <div class="row g-4">
+                    <div class="col-lg-6">
+                      <h3>Vestibulum Ante Ipsum</h3>
+                      <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Quisque velit nisi, pretium ut
+                        lacinia in, elementum id enim.</p>
+                      <p class="highlight">Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula
+                        elementum sed sit amet dui.</p>
+                      <ul class="features-list">
+                        <li>
+                          <i class="bi bi-check2-circle"></i>
+                          <span>Vivamus suscipit tortor eget felis</span>
+                        </li>
+                        <li>
+                          <i class="bi bi-check2-circle"></i>
+                          <span>Curabitur aliquet quam id dui</span>
+                        </li>
+                        <li>
+                          <i class="bi bi-check2-circle"></i>
+                          <span>Nulla quis lorem ut libero</span>
+                        </li>
+                        <li>
+                          <i class="bi bi-check2-circle"></i>
+                          <span>Vestibulum ac diam sit amet</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="image-box">
+                        <img src="assets/img/misc/misc-square-3.webp" alt="" class="img-fluid" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Critical Evaluation Section -->
+
+    <!-- Future Work Section -->
+    <section id="future_work" class="future_work section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Future Work</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="steps-wrapper">
+
+          <div class="step-item" data-aos="fade-right" data-aos-delay="200">
+            <div class="step-content">
+              <div class="step-info">
+                <span class="step-number">01</span>
+                <h3>Initial Consultation</h3>
+                <p>Conducting thorough discovery sessions to understand your business requirements and objectives. Our expert team analyzes your needs to create a customized approach.</p>
+              </div>
+            </div>
+          </div><!-- End Step Item -->
+
+          <div class="step-item" data-aos="fade-left" data-aos-delay="300">
+            <div class="step-content">
+              <div class="step-info">
+                <span class="step-number">02</span>
+                <h3>Planning &amp; Strategy</h3>
+                <p>Developing comprehensive strategies and detailed project plans based on the initial consultation. We create actionable roadmaps with clear milestones and deliverables.</p>
+              </div>
+            </div>
+          </div><!-- End Step Item -->
+
+          <div class="step-item" data-aos="fade-right" data-aos-delay="400">
+            <div class="step-content">
+              <div class="step-info">
+                <span class="step-number">03</span>
+                <h3>Development Phase</h3>
+                <p>Executing the planned strategies with precision and agility. Our team implements solutions while maintaining constant communication and progress updates.</p>
+              </div>
+            </div>
+          </div><!-- End Step Item -->
+
+          <div class="step-item" data-aos="fade-left" data-aos-delay="500">
+            <div class="step-content">
+              <div class="step-info">
+                <span class="step-number">04</span>
+                <h3>Launch &amp; Support</h3>
+                <p>Ensuring smooth deployment and providing ongoing support for implemented solutions. We monitor performance and make necessary adjustments for optimal results.</p>
+              </div>
+            </div>
+          </div><!-- End Step Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Future Work Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Chatlinc</span>
+          </a>
+          <p>This is the report website of Team 12's Project, in partnership with NTTDATA, for the COMP0016 module.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://github.com/Hao-Hao211/ChatLincs.git"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html#">Home</a></li>
+            <li><a href="requirements.html#">Requirements</a></li>
+            <li><a href="research.html#">Research</a></li>
+            <li><a href="ui_design.html#">UI Design</a></li>
+            <li><a href="system_design.html#">System Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+
+          <ul>
+            <li><a href="implementation.html#">Implementation</a></li>
+            <li><a href="testing.html#">Testing</a></li>
+            <li><a href="evaluation.html#">Evaluation</a></li>
+            <li><a href="appendices.html#">Appendices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+
+          <p> </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Chatlinc</strong> <span>All Rights Reserved</span></p>
+
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

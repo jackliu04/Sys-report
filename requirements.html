@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Requirements - System</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="requirements-page">
+
+  <header id="header" class="header d-flex align-items-center position-relative">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Chatlinc</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li class="dropdown"><a href="index.html"><span>Home</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="index.html#abstract">Abstract</a></li>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#video">Video</a></li>
+              <li><a href="index.html#project_timeline">Project Timeline</a></li>
+              <li><a href="index.html#development_team">Development Team</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="requirements.html" class="active"><span>Requirements</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="requirements.html#project_background">Project Background</a></li>
+              <li><a href="requirements.html#project_goals">Project Goals</a></li>
+              <li><a href="requirements.html#requirements_gathering">Requirements Gathering</a></li>
+              <li><a href="requirements.html#personas">Personas</a></li>
+              <li><a href="requirements.html#use_cases">Use Cases</a></li>
+              <li><a href="requirements.html#moscow">MoSCOW</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="research.html"><span>Research</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="research.html#related_projects_review">Related Projects Review</a></li>
+              <li><a href="research.html#technology_review">Technology Review</a></li>
+              <li><a href="research.html#references">References</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="ui_design.html"><span>UI Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="ui_design.html#design_principles">Design Principles</a></li>
+              <li><a href="ui_design.html#sketches">Sketches</a></li>
+              <li><a href="ui_design.html#prototype">Prototype</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="system_design.html"><span>System Design</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="system_design.html#system_architecture">System Architecture</a></li>
+              <li><a href="system_design.html#design_patterns">Design Patterns</a></li>
+              <li><a href="system_design.html#site_map">Site Map</a></li>
+              <li><a href="system_design.html#data_storage">Data Storage</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="implementation.html"><span>Implementation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="implementation.html#packages_frameworks">Packages&amp;Frameworks</a></li>
+              <li><a href="implementation.html#">Dropdown 2</a></li>
+              <li><a href="implementation.html#">Dropdown 3</a></li>
+              <li><a href="implementation.html#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="testing.html"><span>Testing</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="testing.html#testing_strategy">Testing Strategy</a></li>
+              <li><a href="testing.html#unit_testing">Unit Testing</a></li>
+              <li><a href="testing.html#integration_testing">Integration Testing</a></li>
+              <li><a href="testing.html#user_testing">User Acceptance Testing</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="evaluation.html"><span>Evaluation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="evaluation.html#achievements">Achievements</a></li>
+              <li><a href="evaluation.html#critical_evaluation">Critical Evaluation</a></li>
+              <li><a href="evaluation.html#future_work">Future Work</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="appendices.html"><span>Appendices</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="appendices.html#user_manual">User Manual</a></li>
+              <li><a href="appendices.html#deployment_manual">Deployment Manual</a></li>
+              <li><a href="appendices.html#legal_statements">Legal Statements</a></li>
+              <li><a href="appendices.html#dev_blog">Dev Blog</a></li>
+              <li><a href="appendices.html#monthly_videos">Monthly Videos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background position-relative">
+      <div class="container">
+        <h1>Requirements</h1>
+        <nav class="breadcrumbs">
+          <ol>
+
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Project Background Section -->
+    <section id="project_background" class="project_background section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Project Background</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="container ">
+
+          <div>
+            <p></p>
+            <p style="font-size: 22px;">
+              With the increasing impact of climate change and habitat degradation, environmental monitoring has become essential for conservation efforts. The Monitoring and Engagement Notifications Module is designed to empower local communities by leveraging Large Language Models (LLMs) and multimodal AI to track and report changes in ecosystems. By integrating real-time environmental monitoring, this platform allows volunteers to document observations using images, videos, and audio recordings, enhancing data accuracy and accessibility.
+            </p>
+            <p></p>
+            <p style="font-size: 22px;">
+              Despite advancements in AI-driven environmental solutions, barriers remain in making these tools accessible to local communities. Many existing platforms lack user-friendly interfaces and comprehensive data analysis capabilities, limiting their effectiveness. Our module addresses this gap by enabling multimodal searches, allowing administrators to correlate environmental changes, generate detailed reports, and issue alerts for timely intervention.
+            </p>
+            <p></p>
+            <p style="font-size: 22px;">
+              Additionally, the project provides users with advanced geospatial analysis tools to improve environmental decision-making. Designed with sustainability in mind, the module also aims to minimize its carbon footprint, ensuring an efficient yet environmentally responsible AI-driven monitoring system. Through community engagement and AI-powered insights, this platform fosters a collaborative approach to conservation and long-term ecological sustainability.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Project Background Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Client Introduction</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+
+            <p style="font-size: 20px;">
+              NTT DATA is a global leader in digital transformation and IT services, providing innovative solutions across various industries. With a strong focus on sustainability and technology, NTT DATA collaborates with organizations worldwide to drive data-driven decision-making and AI-powered solutions.
+            </p>
+          </div>
+
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-6">
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Project Goals Section -->
+    <section id="project_goals" class="project_goals section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Project Goals</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <p style="font-size: 20px;">
+          This project aims to develop an environmental monitoring platform powered by multimodal AI and geospatial technology, enabling community volunteers to document ecological changes in real time through images, videos, and audio. The system integrates intelligent recognition, map-based visual search, task management, and notification features to support rapid identification of events such as missing animals, coordination of conservation activities, and timely alerts. With efficient data processing and low-impact AI design, the platform supports data-driven local ecosystem protection and sustainable development goals.
+        </p>
+
+      </div>
+
+    </section><!-- /Project Goals Section -->
+
+    <!-- Requirements Gathering Section -->
+    <section id="requirements_gathering" class="requirements_gathering section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Requirements Gathering</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <p style="font-size: 20px;">
+          To align ChatLincs with user needs, we conducted semi-structured interviews with local residence and civil servant. This flexible approach enabled detailed insights into user preferences, ensuring a user-centered design foundation.
+        </p>
+
+      </div>
+
+    </section><!-- /Requirements Gathering Section -->
+
+    <!-- Faq Section -->
+    <section class="faq-9 faq section light-background" id="faq">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5" data-aos="fade-up">
+            <h2 class="faq-title">Local Resident</h2>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-container">
+
+              <div class="faq-item">
+                <h3>Q: What would you need from this platform?</h3>
+                <div class="faq-content">
+                  <p>A: Simple way to quickly upload photos, videos, or recordings outdoors—ideally with analysis provided through LLMs without requiring tech skills.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Q: What features would be most helpful?</h3>
+                <div class="faq-content">
+                  <p>A: A way to see summaries and analyses of my uploads using multimodal data.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Q: Are there any features you’d rather avoid?</h3>
+                <div class="faq-content">
+                  <p>A: No complex or slow systems; I want it clean and reliable.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item ">
+                <h3>Q: What would keep you using it?</h3>
+                <div class="faq-content">
+                  <p>A: Seeing the impact of my contributions on the community.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /Faq Section -->
+
+    <!-- Faq 2 Section -->
+    <section class="faq-9 faq-2 section light-background" id="faq-2">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5" data-aos="fade-up">
+            <h2 class="faq-title">Civil Servant</h2>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-container">
+
+              <div class="faq-item">
+                <h3>Q: How do you currently monitor and document?</h3>
+                <div class="faq-content">
+                  <p>A: I typically rely on manual notes and reports, but it's time-consuming and harder to track long-term trends without a digital system.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Q: What kind of information would you like to access from previous reports?</h3>
+                <div class="faq-content">
+                  <p>A: Historical summaries of environmental changes, such as the spread of invasive species or damage patterns, would be very helpful for long-term planning.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item ">
+                <h3>Q: What feedback options would you find useful?</h3>
+                <div class="faq-content">
+                  <p>A: Easy to flag issues or suggest improvements directly on the platform would be ideal, especially if other users can see and respond.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /Faq 2 Section -->
+
+    <!-- Personas Section -->
+    <section id="personas" class="personas section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Personas</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <p style="font-size: 20px;">
+          Creating personas allowed us to better understand our target users and align our design with their needs. By defining key user types, we ensured that our system remains intuitive, accessible, and engaging. These personas helped our team maintain a user-centered approach throughout development, allowing us to anticipate challenges, refine features, and enhance the overall experience. Below are the selected personas representing different user roles in our platform.
+        </p>
+      </div>
+
+    </section><!-- /Personas Section -->
+
+    <!-- Use Cases Section -->
+    <section id="use_cases" class="use_cases section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Use Cases</h2>
+        <p style="font-size: 20px;">Use cases help define system functionalities by outlining user interactions, ensuring a clear and efficient design.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      </div>
+    </section><!-- /Use Cases Section -->
+
+    <!-- Moscow Section -->
+    <section id="moscow" class="moscow section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>MOSCOW</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <p style="font-size: 20px;">
+          To prioritize system requirements effectively, we developed a MoSCoW list based on user and client needs. This helped us categorize features into Must-have, Should-have, Could-have, and Won't-have, ensuring a structured approach to development. The final version was refined through discussions with the client to align with project goals.
+        </p>
+      </div>
+    </section><!-- /Moscow Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Chatlinc</span>
+          </a>
+          <p>This is the report website of Team 12's Project, in partnership with NTTDATA, for the COMP0016 module.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://github.com/Hao-Hao211/ChatLincs.git"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html#">Home</a></li>
+            <li><a href="requirements.html#">Requirements</a></li>
+            <li><a href="research.html#">Research</a></li>
+            <li><a href="ui_design.html#">UI Design</a></li>
+            <li><a href="system_design.html#">System Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+
+          <ul>
+            <li><a href="implementation.html#">Implementation</a></li>
+            <li><a href="testing.html#">Testing</a></li>
+            <li><a href="evaluation.html#">Evaluation</a></li>
+            <li><a href="appendices.html#">Appendices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+
+          <p> </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Chatlinc</strong> <span>All Rights Reserved</span></p>
+
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
