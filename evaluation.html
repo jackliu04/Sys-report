@@ -615,7 +615,7 @@
           <div class="col-lg-4">
             <ul class="nav nav-tabs flex-column" role="tablist" data-aos="fade-right" data-aos-delay="200">
               <li class="nav-item" role="presentation">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-1" role="tab" aria-selected="false" tabindex="-1">
+                <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-1" role="tab" aria-selected="true">
                   <div class="d-flex align-items-center">
                     <div class="ms-3">
                       <h4>User Interface and experience</h4>
@@ -644,7 +644,7 @@
                 </a>
               </li>
               <li class="nav-item" role="presentation">
-                <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-4" role="tab" aria-selected="true">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-4" role="tab" aria-selected="false" tabindex="-1">
                   <div class="d-flex align-items-center">
 
                     <div class="ms-3">
@@ -658,8 +658,25 @@
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-5" role="tab" aria-selected="false" tabindex="-1">
                   <div class="d-flex align-items-center">
                     <div class="ms-3">
-                      <h4>Curabitur Aliquet</h4>
-                      <p>Excepteur sint occaecat cupidatat</p>
+                      <h4>Efficiency</h4>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-6" role="tab" aria-selected="false" tabindex="-1">
+                  <div class="d-flex align-items-center">
+                    <div class="ms-3">
+                      <h4>Compatibility</h4>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#critical_evaluation-tab-7" role="tab" aria-selected="false" tabindex="-1">
+                  <div class="d-flex align-items-center">
+                    <div class="ms-3">
+                      <h4>Project Management</h4>
                     </div>
                   </div>
                 </a>
@@ -669,7 +686,7 @@
 
           <div class="col-lg-8">
             <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
-              <div class="tab-pane fade" id="critical_evaluation-tab-1" role="tabpanel">
+              <div class="tab-pane fade active show" id="critical_evaluation-tab-1" role="tabpanel">
                 <div class="content-box">
                   <div class="row g-4">
                     <div>
@@ -702,7 +719,7 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade active show" id="critical_evaluation-tab-4" role="tabpanel">
+              <div class="tab-pane fade" id="critical_evaluation-tab-4" role="tabpanel">
                 <div class="content-box">
                   <div class="row g-4">
                     <div>
@@ -716,35 +733,31 @@
               <div class="tab-pane fade" id="critical_evaluation-tab-5" role="tabpanel">
                 <div class="content-box">
                   <div class="row g-4">
-                    <div class="col-lg-6">
-                      <h3>Vestibulum Ante Ipsum</h3>
-                      <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Quisque velit nisi, pretium ut
-                        lacinia in, elementum id enim.</p>
-                      <p class="highlight">Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula
-                        elementum sed sit amet dui.</p>
-                      <ul class="features-list">
-                        <li>
-                          <i class="bi bi-check2-circle"></i>
-                          <span>Vivamus suscipit tortor eget felis</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check2-circle"></i>
-                          <span>Curabitur aliquet quam id dui</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check2-circle"></i>
-                          <span>Nulla quis lorem ut libero</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check2-circle"></i>
-                          <span>Vestibulum ac diam sit amet</span>
-                        </li>
-                      </ul>
+                    <div>
+                      <h3>Efficiency</h3>
+                      <p style="font-size: 20px;">The application performs well overall, with smooth interactions and fast load times for most features such as file uploads and task management. However, retrieval operations—especially when processing large or complex queries—can take noticeably longer. This may affect the user experience in time-sensitive scenarios and could be optimized further.<br>We give a Good rating to our efficiency.</p>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="image-box">
-                        <img src="assets/img/misc/misc-square-3.webp" alt="" class="img-fluid" loading="lazy">
-                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="critical_evaluation-tab-6" role="tabpanel">
+                <div class="content-box">
+                  <div class="row g-4">
+                    <div>
+                      <h3>Compatibility</h3>
+                      <p style="font-size: 20px;">The application is compatible with major desktop environments and modern browsers. It runs reliably on macOS (including Apple Silicon via osx-arm64) and supports Docker-based deployment for backend services. However, due to limited mobile optimization and the requirement for tools like Conda, Docker, and Node.js, setup and usage are currently best suited for developers using Unix-like systems. Mobile and broader OS support could be improved for wider accessibility.<br>We give a Good rating to our compatibility.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="critical_evaluation-tab-7" role="tabpanel">
+                <div class="content-box">
+                  <div class="row g-4">
+                    <div>
+                      <h3>Project Management</h3>
+                      <p style="font-size: 20px;">During development, we used a combination of tools to ensure effective communication and coordination. GitHub was used for version control and issue tracking, while WeChat and email facilitated quick discussions and updates among team members. This multi-channel approach kept everyone aligned and enabled efficient collaboration throughout the project.<br>We give a Very Good rating to our project management.</p>
                     </div>
                   </div>
                 </div>
@@ -773,8 +786,8 @@
             <div class="step-content">
               <div class="step-info">
                 <span class="step-number">01</span>
-                <h3>Initial Consultation</h3>
-                <p>Conducting thorough discovery sessions to understand your business requirements and objectives. Our expert team analyzes your needs to create a customized approach.</p>
+                <h3>Faster Retrieval and Indexing</h3>
+                <p style="font-size:20px;">Retrieval performance can be improved by optimizing vector indexing, caching frequently accessed queries, and using more efficient backends for real-time inference. This would reduce latency for large or complex multimodal searches.</p>
               </div>
             </div>
           </div><!-- End Step Item -->
@@ -783,8 +796,8 @@
             <div class="step-content">
               <div class="step-info">
                 <span class="step-number">02</span>
-                <h3>Planning &amp; Strategy</h3>
-                <p>Developing comprehensive strategies and detailed project plans based on the initial consultation. We create actionable roadmaps with clear milestones and deliverables.</p>
+                <h3>User Accounts &amp; Access Control</h3>
+                <p style="font-size:20px;">Introducing user authentication and access control would allow personalized experiences, secure data handling, and role-based task assignment, enabling use in real-world community or organizational contexts.</p>
               </div>
             </div>
           </div><!-- End Step Item -->
@@ -793,8 +806,8 @@
             <div class="step-content">
               <div class="step-info">
                 <span class="step-number">03</span>
-                <h3>Development Phase</h3>
-                <p>Executing the planned strategies with precision and agility. Our team implements solutions while maintaining constant communication and progress updates.</p>
+                <h3>Scalable Deployment &amp; Cloud Integration</h3>
+                <p style="font-size:20px;">Executing the planned strategies with precision and agility. Our team implements solutions while maintaining constant communication and progress updates.</p>
               </div>
             </div>
           </div><!-- End Step Item -->
@@ -803,8 +816,8 @@
             <div class="step-content">
               <div class="step-info">
                 <span class="step-number">04</span>
-                <h3>Launch &amp; Support</h3>
-                <p>Ensuring smooth deployment and providing ongoing support for implemented solutions. We monitor performance and make necessary adjustments for optimal results.</p>
+                <h3>Carbon Footprint Tracking System</h3>
+                <p style="font-size:20px;">To align with sustainability goals, a future enhancement could include a carbon footprint tracking module. This would allow users to estimate the environmental impact of activities or uploads—such as video processing, data storage, or transportation-related tasks. Integrating APIs for carbon emission estimation or allowing manual data input can support environmentally conscious decision-making and reporting.</p>
               </div>
             </div>
           </div><!-- End Step Item -->
