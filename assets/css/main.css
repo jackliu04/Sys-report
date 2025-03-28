@@ -4167,81 +4167,111 @@ section,
 /*--------------------------------------------------------------
 # Dev Blog Section
 --------------------------------------------------------------*/
-.dev_blog article {
-  background-color: var(--surface-color);
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+.call-to-action {
+  --background-color: var(--contrast-color);
 }
 
-.dev_blog .post-img img {
-  transition: 0.5s;
+.call-to-action .cta-box {
+  position: relative;
+  padding: 80px 30px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.dev_blog .post-date {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+.call-to-action .cta-box .background-overlay {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  text-transform: uppercase;
-  font-size: 13px;
-  padding: 6px 12px;
-  font-weight: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-.dev_blog .post-content {
-  padding: 30px;
+.call-to-action .cta-box .background-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, color-mix(in srgb, var(--surface-color), transparent 5%), color-mix(in srgb, var(--surface-color), transparent 10%));
+  opacity: 0.95;
 }
 
-.dev_blog .post-title {
-  font-size: 20px;
-  color: var(--heading-color);
-  font-weight: 700;
-  transition: 0.3s;
-  margin-bottom: 15px;
+.call-to-action .cta-box .background-overlay .background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.6s ease-in-out;
 }
 
-.dev_blog .meta i {
-  font-size: 16px;
-  color: var(--accent-color);
-}
-
-.dev_blog .meta span {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-.dev_blog p {
-  margin-top: 20px;
-}
-
-.dev_blog hr {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-  margin-bottom: 15px;
-}
-
-.dev_blog .readmore {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  line-height: 1;
-  transition: 0.3s;
-  color: color-mix(in srgb, var(--heading-color), transparent 20%);
-}
-
-.dev_blog .readmore i {
-  line-height: 0;
-  margin-left: 6px;
-  font-size: 16px;
-}
-
-.dev_blog article:hover .post-title,
-.dev_blog article:hover .readmore {
-  color: var(--accent-color);
-}
-
-.dev_blog article:hover .post-img img {
+.call-to-action .cta-box:hover .background-image {
   transform: scale(1.1);
+}
+
+.call-to-action .cta-box .content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.call-to-action .cta-box .content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.call-to-action .cta-box .content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.call-to-action .cta-box .content .cta-buttons .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 35px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.call-to-action .cta-box .content .cta-buttons .btn-cta i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.call-to-action .cta-box .content .cta-buttons .btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action .cta-box .content .cta-buttons .btn-cta:hover i {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .call-to-action .cta-box {
+    padding: 60px 20px;
+  }
+
+  .call-to-action .cta-box .content h2 {
+    font-size: 2rem;
+  }
+
+  .call-to-action .cta-box .content p {
+    font-size: 1rem;
+  }
+
+  .call-to-action .cta-box .content .btn-cta {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
 }
 
 /*--------------------------------------------------------------
