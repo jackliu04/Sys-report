@@ -139,158 +139,152 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
+    <!-- User Manual Section -->
+<section id="user_manual" class="user_manual section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio Details</h2>
+  <div class="container section-title" data-aos="fade-up">
+    <h2>💻 User Manual</h2>
+  </div>
 
-      </div><!-- End Section Title -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h4>1. 📁 <strong>Upload Data</strong></h4>
+    <p style="font-size: 18px;">To upload multimedia data:</p>
+    <ul style="font-size: 18px;">
+      <li>Click <strong>"Upload"</strong> in the top-right menu.</li>
+      <li>Enter the following details:
+        <ul>
+          <li><strong>Collection Name:</strong> A logical grouping for related data (like a folder).</li>
+          <li><strong>Description:</strong> Briefly describe the content (e.g., "A lovely dog").</li>
+          <li><strong>Location:</strong> Provide either an address (e.g., "London Zoo") or coordinates.</li>
+        </ul>
+      </li>
+      <li>Drag and drop files or click to browse files.</li>
+    </ul>
 
-        <div class="portfolio-details-5">
-          <div class="portfolio-details-slider swiper init-swiper mb-5" data-aos="fade-up">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 800,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "effect": "fade",
-                "slidesPerView": 1,
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "navigation": {
-                  "nextEl": ".swiper-button-next",
-                  "prevEl": ".swiper-button-prev"
-                }
-              }
-            </script>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/portfolio-2.webp" alt="Portfolio Image" class="img-fluid" loading="lazy">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/portfolio-11.webp" alt="Portfolio Image" class="img-fluid" loading="lazy">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/portfolio-9.webp" alt="Portfolio Image" class="img-fluid" loading="lazy">
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
+    <p style="font-size: 18px;"><strong>Example:</strong></p>
+    <ul style="font-size: 18px;">
+      <li>Uploaded: Image of "A lovely dog with sunglasses"</li>
+      <li>Location: "University College London"</li>
+      <li>Collection: "Demo"</li>
+    </ul>
 
-          <div class="row gy-5">
-            <div class="col-lg-7" data-aos="fade-up">
-              <div class="project-content">
-                <div class="project-header">
-                  <span class="category">Web Development</span>
-                  <h2>Modern E-commerce Platform Development</h2>
-                  <div class="meta">
-                    <div class="meta-item">
-                      <i class="bi bi-calendar3"></i>
-                      <span>March 2025</span>
-                    </div>
-                    <div class="meta-item">
-                      <i class="bi bi-building"></i>
-                      <span>TechVision Inc.</span>
-                    </div>
-                    <div class="meta-item">
-                      <i class="bi bi-globe"></i>
-                      <a href="#" target="_blank">www.example.com</a>
-                    </div>
-                  </div>
-                </div>
+    <img src="./assets/img/upload1.png" alt="Upload Step 1" class="img-fluid my-2" />
+    <img src="./assets/img/upload2.png" alt="Upload Step 2" class="img-fluid my-2" />
+    <p style="font-size: 16px;"><em>(Uploaded files from different sources can be stored in the same collection to enrich your dataset.)</em></p>
 
-                <div class="content">
-                  <p class="lead">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Proin sodales ultrices nulla blandit volutpat.
-                  </p>
+    <hr class="my-4" />
 
-                  <div class="project-section">
-                    <h3><i class="bi bi-stars"></i> Project Overview</h3>
-                    <p>
-                      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-                    </p>
-                  </div>
+    <h4>2. 🌍 <strong>Map View</strong></h4>
+    <p style="font-size: 18px;">To visualize your uploaded data geographically:</p>
+    <ul style="font-size: 18px;">
+      <li>Click <strong>"Map"</strong> in the top-right menu.</li>
+      <li>Enter:
+        <ul>
+          <li><strong>Collection Name</strong></li>
+          <li><strong>Central Location</strong> (address or coordinates)</li>
+          <li><strong>Keywords (optional)</strong></li>
+          <li><strong>Search Radius</strong></li>
+        </ul>
+      </li>
+    </ul>
+    <p style="font-size: 18px;"><strong>Example:</strong></p>
+    <ul style="font-size: 18px;">
+      <li>Center: "King’s Cross", Radius: 3.6 km, Collection: "Demo"</li>
+      <li>Result: Dog image at "University College London", 1.14 km away</li>
+    </ul>
+    <img src="./assets/img/map.png" alt="Map Example" class="img-fluid my-2" />
 
-                  <div class="project-section">
-                    <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
-                    <p>
-                      Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-                    </p>
-                  </div>
+    <hr class="my-4" />
 
-                  <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
-                    <p>
-                      Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <h4>3. ✅ <strong>Task Management (Kanban Interface)</strong></h4>
+    <p style="font-size: 18px;">Efficiently organize and prioritize your tasks:</p>
+    <ul style="font-size: 18px;">
+      <li>Click <strong>"Dashboard"</strong> from the top-right menu.</li>
+      <li>Click <strong>"Add New Task"</strong>.</li>
+      <li>Enter task details:
+        <ul>
+          <li>Title</li>
+          <li>Description</li>
+          <li>Priority (High, Medium, Low)</li>
+          <li>Category</li>
+          <li>Due Date</li>
+          <li>Assignee</li>
+        </ul>
+      </li>
+      <li>Use <strong>Drag-and-Drop</strong> to move tasks across Todo, In Progress, and Done.</li>
+    </ul>
 
-            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
-              <div class="project-sidebar">
-                <div class="info-card">
-                  <h3>Project Features</h3>
-                  <ul class="features-list">
-                    <li><i class="bi bi-check-circle"></i> Responsive Design</li>
-                    <li><i class="bi bi-check-circle"></i> User Authentication</li>
-                    <li><i class="bi bi-check-circle"></i> Payment Integration</li>
-                    <li><i class="bi bi-check-circle"></i> Inventory Management</li>
-                    <li><i class="bi bi-check-circle"></i> Analytics Dashboard</li>
-                    <li><i class="bi bi-check-circle"></i> API Integration</li>
-                  </ul>
-                </div>
+    <p style="font-size: 18px;"><strong>Example:</strong></p>
+    <ul style="font-size: 18px;">
+      <li>Task: "Lost dog in Regent's Park"</li>
+      <li>Description: "A white dog with a smile is lost"</li>
+    </ul>
+    <img src="./assets/img/dashboard2.png" alt="Task Entry" class="img-fluid my-2" />
+    <img src="./assets/img/dashboard.png" alt="Task Board" class="img-fluid my-2" />
 
-                <div class="info-card">
-                  <h3>Technologies Used</h3>
-                  <div class="tech-stack">
-                    <span>React.js</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>Docker</span>
-                    <span>AWS</span>
-                    <span>Redux</span>
-                  </div>
-                </div>
+    <hr class="my-4" />
 
-                <div class="gallery-grid">
-                  <h3>Project Gallery</h3>
-                  <div class="row g-3">
-                    <div class="col-6">
-                      <img src="assets/img/portfolio/portfolio-3.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
-                    </div>
-                    <div class="col-6">
-                      <img src="assets/img/portfolio/portfolio-10.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
-                    </div>
-                    <div class="col-6">
-                      <img src="assets/img/portfolio/portfolio-9.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
-                    </div>
-                    <div class="col-6">
-                      <img src="assets/img/portfolio/portfolio-1.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <h4>4. 💬 <strong>Multimodal RAG</strong></h4>
+    <p style="font-size: 18px;">Engage in advanced retrieval-augmented conversations:</p>
+    <ul style="font-size: 18px;">
+      <li>Click <strong>"Chat"</strong> in the top-right menu.</li>
+      <li>Check <strong>"Retrieve"</strong> to enable RAG-based search.</li>
+      <li>Select the desired <strong>Collection</strong> from the dropdown.</li>
+    </ul>
 
-        </div>
+    <p style="font-size: 18px;"><strong>Example (Text Retrieval):</strong></p>
+    <blockquote style="font-size: 18px;">"I am looking for a dog with sunglasses."</blockquote>
+    <p style="font-size: 18px;">→ Bot retrieves image and notes: <em>“pink and heart-shaped sunglasses.”</em></p>
+    <img src="./assets/img/chat3.png" alt="Text RAG" class="img-fluid my-2" />
 
-      </div>
+    <p style="font-size: 18px;"><strong>Example (Multimodal Retrieval):</strong></p>
+    <ul style="font-size: 18px;">
+      <li>Click upload next to input box.</li>
+      <li>Select an image and type a query.</li>
+    </ul>
+    <blockquote style="font-size: 18px;">"I am looking for this kind of dog."</blockquote>
+    <p style="font-size: 18px;">→ Bot retrieves visually similar dog image + context.</p>
+    <img src="./assets/img/chat1.png" alt="Multimodal 1" class="img-fluid my-2" />
+    <img src="./assets/img/chat2.png" alt="Multimodal 2" class="img-fluid my-2" />
 
-    </section><!-- /Portfolio Details Section -->
+    <hr class="my-4" />
+
+    <h4>5. 🎬 <strong>Chat with Video</strong></h4>
+    <p style="font-size: 18px;">Interact with video content using AI-powered Q&A:</p>
+    <ul style="font-size: 18px;">
+      <li>Click <strong>"Video"</strong> in the top-right menu.</li>
+      <li>Click <strong>"Upload Video"</strong>.</li>
+      <li>Paste <strong>YouTube URL</strong>.</li>
+      <li>Optional: Set <strong>Transcript Augmentation</strong> (n).</li>
+      <li>Check <strong>No Language Sound</strong> for silent videos.</li>
+      <li>Click Upload. Processing may take time.</li>
+    </ul>
+
+    <p style="font-size: 16px;"><em>n controls how many transcript segments are combined. Test to optimize results.</em></p>
+    <img src="./assets/img/video_upload.png" alt="Video Upload UI" class="img-fluid my-2" />
+
+    <p style="font-size: 18px;"><strong>Example:</strong></p>
+    <p style="font-size: 18px;">
+      We upload the YouTube video <a href="https://www.youtube.com/watch?v=7Hcg-rLYwdM" target="_blank">"Welcome back to Planet Earth"</a>, documenting NASA astronauts Douglas Hurley and Robert Behnken’s return.
+    </p>
+    <img src="./assets/img/video_select2.png" alt="Video Selected" class="img-fluid my-2" />
+
+    <blockquote style="font-size: 18px;">"What is the name of one of the astronauts?"</blockquote>
+    <p style="font-size: 18px;">→ Bot identifies <strong>Robert Behnken</strong> and provides snippet.</p>
+    <img src="./assets/img/video_example.png" alt="Video Result" class="img-fluid my-2" />
+
+    <hr class="my-4" />
+
+    <h4>🛠 <strong>Troubleshooting & FAQs</strong></h4>
+    <ul style="font-size: 18px;">
+      <li><strong>Slow Upload/Processing:</strong> Use shorter videos with transcripts.</li>
+      <li><strong>Location Issues:</strong> Prefer precise addresses or coordinates.</li>
+      <li><strong>Docker Issues:</strong> Run <code>docker compose logs</code> to debug.</li>
+    </ul>
+
+  </div>
+</section><!-- /User Manual Section -->
 
   </main>
 
